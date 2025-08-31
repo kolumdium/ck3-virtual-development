@@ -1,0 +1,78 @@
+﻿# TIER 0  (0 vdev)
+vdev_tier_0 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0
+    levy_size = 0
+    supply_limit = 0
+}
+
+# TIER 10 (10 vdev) => 5%, 5%, 1500
+vdev_tier_10 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.05
+    levy_size = 0.05
+    supply_limit = 1500
+}
+
+vdev_tier_20 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.1
+    levy_size = 0.1
+    supply_limit = 3000
+}
+
+vdev_tier_30 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.15
+    levy_size = 0.15
+    supply_limit = 4500
+}
+
+vdev_tier_40 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.2
+    levy_size = 0.2
+    supply_limit = 6000
+}
+
+vdev_tier_50 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.25
+    levy_size = 0.25
+    supply_limit = 7500
+}
+
+vdev_tier_60 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.3
+    levy_size = 0.3
+    supply_limit = 9000
+}
+
+vdev_tier_70 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.35
+    levy_size = 0.35
+    supply_limit = 10500
+}
+
+vdev_tier_80 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.4
+    levy_size = 0.4
+    supply_limit = 12000
+}
+
+vdev_tier_90 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.45
+    levy_size = 0.45
+    supply_limit = 13500
+}
+
+vdev_tier_100 = {
+    icon = county_modifier_development_positive
+    tax_mult = 0.5
+    levy_size = 0.5
+    supply_limit = 15000
+}

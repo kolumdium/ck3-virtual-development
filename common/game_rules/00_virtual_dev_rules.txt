@@ -1,0 +1,18 @@
+﻿vdev_enabled_rule = {
+    categories = { game_setup }     # any category you like: game_setup, difficulty, map, rules, etc.
+    default = vdev_enabled          # which setting is selected by default
+
+    vdev_disabled = { }             # settings (no need for "option = { ... }" in this schema)
+    vdev_enabled  = { }
+}
+
+# Virtual Development: overflow preset
+vdev_overflow_preset = {
+    categories = { game_setup }
+    default = vdev_threshold_100
+
+    vdev_threshold_100  = { }        # "Small: 5 above 95"
+    vdev_threshold_90 = { }        # "Medium: 10 above 90"
+    vdev_threshold_80    = { }        # "Big: 15 above 85"
+    vdev_threshold_0    = { }        # "Big: 15 above 85"
+}

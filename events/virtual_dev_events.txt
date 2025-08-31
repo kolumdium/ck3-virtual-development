@@ -1,0 +1,19 @@
+﻿# Events run from the on_yearly_pulse on_action
+namespace = vdev_yearly
+
+vdev_yearly.1 = {
+    type = character_event
+    hidden = yes
+
+    immediate = {
+        # Process ONLY the directly held counties (so each county runs exactly once).
+        every_held_county = {
+            limit = {
+                    development_level >= vdev_overflow_threshold
+                    # development_level > 10 # avoid stacking buff on 1 development
+                }
+            # Jump to county scope and perform the move/clamp work there.
+            reduce_development = yes
+        }
+    }
+}

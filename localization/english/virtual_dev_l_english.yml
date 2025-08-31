@@ -1,0 +1,47 @@
+﻿l_english:
+ rule_vdev_enabled_rule: "Virtual Development"
+ rule_vdev_enabled_rule_desc: "Toggle the #V Virtual Development#! system: each year, overflow [development|E] in directly held [counties|E] is converted to a virtual pool that grants tiered county bonuses."
+
+ setting_vdev_disabled: "#high Disabled#!"
+ setting_vdev_disabled_desc: "Do not run the yearly overflow sweep and do not apply Virtual Development bonuses."
+
+ setting_vdev_enabled: "Enabled"
+ setting_vdev_enabled_desc: "Run the yearly sweep that converts overflow [development|E] and applies bonuses to directly held [counties|E]."
+
+ rule_vdev_overflow_preset: "Virtual Development: Overflow Threshold"
+ rule_vdev_overflow_preset_desc: "Controls how much real [development|E] is converted to Virtual Development during the yearly sweep."
+
+ setting_vdev_threshold_100: "Threshold: 100"
+ setting_vdev_threshold_100_desc: "Only [development|E] above #V 100#! is converted."
+
+ setting_vdev_threshold_90: "Threshold: 90"
+ setting_vdev_threshold_90_desc: "Convert [development|E] above #V 90#!."
+
+ setting_vdev_threshold_80: "Threshold: 80"
+ setting_vdev_threshold_80_desc: "Convert [development|E] above #V 80#!."
+
+ setting_vdev_threshold_0: "Threshold: 0"
+ setting_vdev_threshold_0_desc: "Convert any [development|E] above #V 0#! (maximal overflow)."
+
+ vdev_tier_0: "Virtual Development (0)"
+ vdev_tier_0_desc: "No bonus from Virtual Development."
+
+ vdev_tier_10: "Virtual Development (10)"
+
+ vdev_tier_20: "Virtual Development (20)"
+
+ vdev_tier_30: "Virtual Development (30)"
+
+ vdev_tier_40: "Virtual Development (40)"
+
+ vdev_tier_50: "Virtual Development (50)"
+
+ vdev_tier_60: "Virtual Development (60)"
+
+ vdev_tier_70: "Virtual Development (70)"
+
+ vdev_tier_80: "Virtual Development (80)"
+
+ vdev_tier_90: "Virtual Development (90)"
+
+ vdev_tier_100: "Virtual Development (100)"
