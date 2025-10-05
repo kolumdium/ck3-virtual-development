@@ -1,0 +1,82 @@
+﻿# vdev_public_school_0 = {
+
+#     construction_time = slow_construction_time
+
+#     can_construct_potential = {
+# 		building_requirement_castle_city_church = { LEVEL = 01 }
+# 	}
+#     show_disabled = yes
+
+# 	cost_gold = expensive_building_tier_1_cost
+
+#     province_modifier = {
+# 		monthly_income = excellent_building_tax_tier_1
+# 		defender_holding_advantage = normal_building_advantage_tier_2
+# 	}
+	
+# 	character_modifier = {
+# 		men_at_arms_maintenance = normal_building_maa_maintenance_tier_1
+# 		mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_1
+# 	}
+	
+# 	county_modifier = {
+# 		development_growth_factor = normal_building_development_growth_factor_tier_1
+# 		development_growth = normal_building_development_growth_tier_1
+# 		travel_danger = -1
+# 	}
+
+#     next_building = vdev_special_building_02
+#     type_icon = "icon_building_blacksmiths.dds"
+
+# }
+
+# vdev_special_building_02 = {
+
+#     construction_time = slow_construction_time
+
+#     can_construct_potential = {
+# 		building_requirement_castle_city_church = { LEVEL = 01 }
+# 		scope:holder.culture = {
+# 			has_innovation = innovation_guilds
+# 		}
+# 	}
+#     can_construct_showing_failures_only = {
+# 		building_requirement_tribal = no
+# 	}
+#     # is_enabled = {yes}
+#     show_disabled = yes
+
+#     can_construct = {
+# 	}
+
+# 	cost_gold = expensive_building_tier_1_cost
+#     # type = regular
+
+#     # # A modifier applied to the county holder
+# 	# county_holder_character_modifier = {
+#     #     owned_legend_spread_mult = 0.05
+# 	# }
+#     # character_modifier = {
+# 	# 	men_at_arms_maintenance = normal_building_maa_maintenance_tier_1
+# 	# 	mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_1
+# 	# }
+#     province_modifier = {
+# 		monthly_income = excellent_building_tax_tier_1
+# 		defender_holding_advantage = normal_building_advantage_tier_1
+# 	}
+	
+# 	character_modifier = {
+# 		men_at_arms_maintenance = normal_building_maa_maintenance_tier_1
+# 		mercenary_hire_cost_mult = normal_building_maa_maintenance_tier_1
+# 	}
+	
+# 	county_modifier = {
+# 		development_growth_factor = normal_building_development_growth_factor_tier_1
+# 		development_growth = normal_building_development_growth_tier_1
+# 		travel_danger = -1
+# 	}
+
+#     # next_building = vdev_test_building_02
+#     type_icon = "icon_building_blacksmiths.dds"
+
+# }
