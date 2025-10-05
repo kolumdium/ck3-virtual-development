@@ -1,0 +1,180 @@
+﻿virtual_developer_trait = {
+	category = lifestyle
+	icon = architect.dds
+
+	# stewardship = 1
+	# domain_tax_mult = 0.01
+	# life_expectancy = 2
+	# development_growth = 0.02
+	# development_growth_factor = 0.02
+	# building_slot_add = 1
+	# owned_legend_spread_add = 1
+	# owned_legend_spread_mult = 0.02
+	# fort_level = 1
+
+	ruler_designer_cost = 99999
+
+	tracks = {
+		vdev_normal = {
+			20 = {
+				domain_limit = 1
+				domain_tax_mult = 0.05
+			}
+			40 = {
+				domain_limit = 1
+				domain_tax_mult = 0.10
+			}
+			60 = {
+				domain_limit = 1
+				domain_tax_mult = 0.15
+			}
+
+			80 = {
+				domain_limit = 1
+				domain_tax_mult = 0.20
+			}
+
+			100 = {
+				domain_limit = 2
+				domain_tax_mult = 0.25
+			}
+		}
+		vdev_offensive = {
+			20 = {
+				knight_limit = 1
+				knight_effectiveness_mult = 0.05
+			}
+			40 = {
+				knight_limit = 1
+				knight_effectiveness_mult = 0.1
+
+			}
+			60 = {
+				knight_limit = 1
+				knight_effectiveness_mult = 0.15
+			}
+
+			80 = {
+				knight_limit = 1
+				men_at_arms_limit = 1
+				knight_effectiveness_mult = 0.2
+			}
+
+			100 = {
+				knight_limit = 2
+				men_at_arms_limit = 1
+				knight_effectiveness_mult = 0.25
+			}
+		}
+		vdev_defensive = {
+			20 = {
+				defender_holding_advantage = 2
+				garrison_size = 0.2
+			}
+			40 = {
+				defender_holding_advantage = 2
+				garrison_size = 0.2
+
+			}
+			60 = {
+				defender_holding_advantage = 2
+				garrison_size = 0.2
+			}
+
+			80 = {
+				defender_holding_advantage = 2
+				garrison_size = 0.2
+				fort_level = 1
+			}
+
+			100 = {
+				defender_holding_advantage = 2
+				garrison_size = 0.2
+				fort_level = 1
+			}
+		}
+		vdev_health = {
+			20 = {
+				life_expectancy = 2
+				health = 0.05
+				epidemic_resistance = 2
+			}
+			40 = {
+				life_expectancy = 4
+				health = 0.1
+				epidemic_resistance = 4
+			}
+			60 = {
+				life_expectancy = 6
+				health = 0.15
+				epidemic_resistance = 6
+			}
+
+			80 = {
+				life_expectancy = 8
+				health = 0.2
+				epidemic_resistance = 8
+			}
+
+			100 = {
+				life_expectancy = 10
+				health = 0.25
+				epidemic_resistance = 10
+			}
+		}
+		vdev_infrastucture = {
+			20 = {
+				vassal_levy_contribution_add = 0.1
+				vassal_tax_contribution_add = 0.1
+				movement_speed = 0.1
+				owned_legend_spread_mult = 0.2
+			}
+			40 = {
+				vassal_levy_contribution_add = 0.1
+				vassal_tax_contribution_add = 0.1
+				movement_speed = 0.1
+				owned_legend_spread_mult = 0.2
+			}
+			60 = {
+				vassal_levy_contribution_add = 0.1
+				vassal_tax_contribution_add = 0.1
+				movement_speed = 0.1
+				vassal_opinion = 10
+				owned_legend_spread_mult = 0.2
+			}
+
+			80 = {
+				vassal_levy_contribution_add = 0.1
+				vassal_tax_contribution_add = 0.1
+				movement_speed = 0.1
+				vassal_opinion = 10
+				owned_legend_spread_mult = 0.2
+			}
+
+			100 = {
+				vassal_levy_contribution_add = 0.1
+				vassal_tax_contribution_add = 0.1
+				movement_speed = 0.1
+				vassal_opinion = 10
+				owned_legend_spread_mult = 0.2
+			}
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_vdever_desc
+			}
+			desc = trait_vdever_character_desc
+		}
+	}
+
+	compatibility = {
+		brave = @pos_compat_low
+		craven = @neg_compat_low
+	}
+}
