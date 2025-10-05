@@ -1,4 +1,5 @@
-﻿# TIER 0  (0 vdev)
+﻿# We keep this only for backwards compatability
+# TIER 0  (0 vdev)
 vdev_tier_0 = {
     icon = county_modifier_development_positive
     tax_mult = 0
