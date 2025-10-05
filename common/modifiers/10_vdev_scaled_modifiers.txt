@@ -1,0 +1,112 @@
+﻿# =========================================
+# NORMAL (Economic core) 
+# Target: +50% taxes, +50% levies, +15,000 supply @100
+# =========================================
+vdev_tier_scaled_normal = {
+    tax_mult    = 0.005      # +0.5% per level  → +50% @100
+    levy_size   = 0.005      # +0.5% per level  → +50% @100
+    supply_limit = 150       # +150 per level   → +15,000 @100
+    icon = county_modifier_development_positive
+    scale = {
+        value = vdev_modifier_scaling_value_normal
+        desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_NORMAL_LEVEL
+        display_mode = scaled
+    }
+}
+
+# =========================================
+# DEFENSIVE
+# Target: meaningful fortress strength @100
+# =========================================
+vdev_tier_scaled_defensive = {
+    fort_level    = 0.03     # +3 total @100
+    garrison_size = 0.03       # +30% total @100
+    defender_holding_advantage     = 0.1      # +10 total @100
+    icon = rock_positive
+    scale = {
+        value = vdev_modifier_scaling_value_defensive
+        desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_DEFENSIVE_LEVEL
+        display_mode = scaled
+    }
+}
+
+# =========================================
+# OFFENSIVE
+# Target: strong stationed MAA @100
+# =========================================
+vdev_tier_scaled_offensive = {
+    stationed_maa_damage_mult    = 0.005   # +50% @100
+    stationed_maa_toughness_mult = 0.005   # +50% @100
+    icon = prowess_positive
+    scale = {
+        value = vdev_modifier_scaling_value_offensive
+        desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_OFFENSIVE_LEVEL
+        display_mode = scaled
+    }
+}
+
+# =========================================
+# HEALTH / STABILITY
+# Target: safer travel + religious flavor @100
+# =========================================
+vdev_tier_scaled_health = {
+    epidemic_resistance = 0.1   # +10 @100
+    travel_danger  = -0.1   # -10.0 @100
+    icon = piety_positive
+    scale = {
+        value = vdev_modifier_scaling_value_health
+        desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_HEALTH_LEVEL
+        display_mode = scaled
+    }
+    
+}
+
+# =========================================
+# INFRASTRUCTURE
+# Target: faster/cheaper building + control gain @100
+# =========================================
+vdev_tier_scaled_infrastructure = {
+    build_speed      = -0.003   # -30% @100
+    build_gold_cost	 = -0.003   # -30% @100
+    monthly_county_control_growth_add    = 0.001     # +0.1 @100
+    icon = county_modifier_control_positive
+    scale = {
+        value = vdev_modifier_scaling_value_infrastructure
+        desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_INFRASTRUCTURE_LEVEL
+        display_mode = scaled
+    }
+}
+
+# =========================================
+# PRESTIGE / CULTURE
+# Target: knights + prestige drip @100
+# =========================================
+# vdev_tier_scaled_prestige = {
+#     # knight_effectiveness_mult = 0.005   # +50% @100
+#     # monthly_prestige          = 0.01    # +0.10 @100
+#     icon = prestige_positive
+#     scale = {
+#         value = vdev_modifier_scaling_value_prestige
+#         desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_PRESTIGE_LEVEL
+#         display_mode = scaled
+#     }
+# }
+
+# =========================================
+# legend / SOFT POWER
+# Target: legend spread + popularity @100
+# =========================================
+# vdev_tier_scaled_legend = {
+#     # owned_legend_spread_mult = 0.004   # +40% @100
+#     county_holder_character_modifier = {
+#         owned_legend_spread_mult = 0.04
+#         learning = 1
+#     }
+#     county_opinion_add       = 0.1     # +10 @100
+#     icon = magic_positive
+#     scale = {
+#         value = vdev_modifier_scaling_value_legend
+#         desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_legend_LEVEL
+#         display_mode = scaled
+#     }
+# }

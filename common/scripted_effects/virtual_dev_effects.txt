@@ -1,87 +1,67 @@
 ﻿reduce_development = {
     change_development_level = minor_development_level_loss
-    change_vdevelopment_level = yes
+    # change_vdevelopment_level = yes
 }
 
-change_vdevelopment_level = {
-    # get the current vdev modifier level
-    # up the tier by one step
-    # refresh the modifier
-    # Upgrade one tier (10) per pass; cap at 100
-    if = {
-        limit = {
-            NOR = {
-                has_county_modifier = vdev_tier_10
-                has_county_modifier = vdev_tier_20
-                has_county_modifier = vdev_tier_30
-                has_county_modifier = vdev_tier_40
-                has_county_modifier = vdev_tier_50
-                has_county_modifier = vdev_tier_60
-                has_county_modifier = vdev_tier_70
-                has_county_modifier = vdev_tier_80
-                has_county_modifier = vdev_tier_90
-                has_county_modifier = vdev_tier_100
-            }
-        }
-        add_county_modifier = { modifier = vdev_tier_0 years = -1 }
-    }
-    if = {
-        limit = { has_county_modifier = vdev_tier_0 }
-        remove_county_modifier = vdev_tier_0
-        add_county_modifier = { modifier = vdev_tier_10 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_10 }
-        remove_county_modifier = vdev_tier_10
-        add_county_modifier = { modifier = vdev_tier_20 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_20 }
-        remove_county_modifier = vdev_tier_20
-        add_county_modifier = { modifier = vdev_tier_30 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_30 }
-        remove_county_modifier = vdev_tier_30
-        add_county_modifier = { modifier = vdev_tier_40 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_40 }
-        remove_county_modifier = vdev_tier_40
-        add_county_modifier = { modifier = vdev_tier_50 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_50 }
-        remove_county_modifier = vdev_tier_50
-        add_county_modifier = { modifier = vdev_tier_60 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_60 }
-        remove_county_modifier = vdev_tier_60
-        add_county_modifier = { modifier = vdev_tier_70 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_70 }
-        remove_county_modifier = vdev_tier_70
-        add_county_modifier = { modifier = vdev_tier_80 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_80 }
-        remove_county_modifier = vdev_tier_80
-        add_county_modifier = { modifier = vdev_tier_90 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_90 }
-        remove_county_modifier = vdev_tier_90
-        add_county_modifier = { modifier = vdev_tier_100 years = -1 }
-    }
-    else_if = {
-        limit = { has_county_modifier = vdev_tier_100 }
-        # already at max; keep as is (optionally refresh)
-        # add_county_modifier = { modifier = vdev_tier_100 years = -1 }
-    }
-    else = {
-        # no known tier on county; initialize
-        add_county_modifier = { modifier = vdev_tier_0 years = -1 }
-    }
+# test_variable_buff = {
+#     # initiate_county_vdev
+#     increment_county_vdev = yes
+#     refresh_vdev_buff = yes
+# }
+
+# refresh_vdev_buff = {
+#     remove_county_modifier = vdev_tier_scaled
+#     add_county_modifier = { modifier = vdev_tier_scaled years = -1 }
+# }
+
+test_variable_buff = {
+    init_vdev_all = yes
+    refresh_all_vdev_buffs = yes 
+    init_vdev_normal = yes
+    init_vdev_defensive = yes
+    init_vdev_health = yes
+    init_vdev_infrastructure = yes
+ 
+    increment_vdev_normal = yes
+    increment_vdev_normal = yes
+    increment_vdev_normal = yes
+    increment_vdev_normal = yes
+    increment_vdev_normal = yes
+    increment_vdev_normal = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_defensive = yes
+    increment_vdev_health = yes
+    increment_vdev_health = yes
+    increment_vdev_health = yes
+    increment_vdev_health = yes
+    increment_vdev_health = yes
+    increment_vdev_health = yes
+    increment_vdev_health = yes
+    increment_vdev_health = yes
+    increment_vdev_infrastructure = yes
+    increment_vdev_infrastructure = yes
+    increment_vdev_infrastructure = yes
+    increment_vdev_infrastructure = yes
+    increment_vdev_infrastructure = yes
+    increment_vdev_infrastructure = yes
+    increment_vdev_infrastructure = yes
+    increment_vdev_infrastructure = yes
+    # increment_vdev_normal = yes
+    # increment_vdev_normal = yes
+    # increment_vdev_normal = yes
+    # increment_vdev_normal = yes
+    # refresh_vdev_normal = yes
+    refresh_all_vdev_buffs = yes
+
+    # set_variable = { name = county_vdev_normal value = 50 }
+    # refresh_vdev_normal = yes
 }

@@ -1,0 +1,37 @@
+﻿# =========================================
+# Refresh: remove+readd the scaled county modifier (county scope!)
+# =========================================
+refresh_vdev_normal = {
+    remove_county_modifier = vdev_tier_scaled_normal
+    add_county_modifier = { modifier = vdev_tier_scaled_normal years = -1 }
+}
+
+refresh_vdev_defensive = {
+    remove_county_modifier = vdev_tier_scaled_defensive
+    add_county_modifier = { modifier = vdev_tier_scaled_defensive years = -1 }
+}
+
+refresh_vdev_offensive = {
+    remove_province_modifier = vdev_tier_scaled_offensive
+    add_province_modifier = {
+        modifier = vdev_tier_scaled_offensive
+        years = -1
+    }
+}
+
+refresh_vdev_health = {
+    remove_county_modifier = vdev_tier_scaled_health
+    add_county_modifier = { modifier = vdev_tier_scaled_health years = -1 }
+}
+
+refresh_vdev_infrastructure = {
+    remove_county_modifier = vdev_tier_scaled_infrastructure
+    add_county_modifier = { modifier = vdev_tier_scaled_infrastructure years = -1 }
+}
+
+# Convenience: refresh all seven (county scope)
+refresh_all_vdev_buffs = {
+    refresh_vdev_normal = yes
+    refresh_vdev_health = yes
+    refresh_vdev_infrastructure = yes
+}
