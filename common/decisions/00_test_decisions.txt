@@ -1,0 +1,61 @@
+﻿@test_decision_cooldown_time = 0
+
+# we need to make sure the vdev variable exist before checking in this decision.
+my_decision = {
+    title = decision_title
+
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+    desc = decision_desc
+
+    decision_group_type = realm
+    sort_order = 100
+
+    cooldown = { days = @test_decision_cooldown_time }
+
+    is_shown = {
+        is_landless_adventurer = no
+    }
+
+    widget = {
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				barony_is_valid_for_vdev_order_lease_trigger = { CHARACTER = scope:ruler }
+			}
+			trigger_else = {
+				custom_description = {
+					text = "has_holy_order_barony_selected"
+					always = no
+				}
+			}
+		}
+        # barony_valid = {
+        #     # TODO Filter unvalid once
+        #     # those with to low x or a building in the chain already build.
+        # }
+	}
+
+    is_valid = {
+        prestige_level >= 2
+        scope:barony.county.var:county_vdev_normal > 2
+    }
+
+    is_valid_showing_failures_only = {
+        is_ruler = yes
+        is_available_adult = yes
+        is_at_war = no
+        is_imprisoned = no
+    }
+
+    effect = {
+        scope:barony.title_province = {
+            add_building = vdev_special_normal_01
+        }
+    }
+
+    ai_check_interval = -1
+    # ai_potential = {}
+}
