@@ -1,0 +1,65 @@
+﻿l_english:
+  ### NORMAL — Public Services
+ building_type_vdev_special_normal_01: "Public Services"
+ building_type_vdev_special_normal_01_desc: "Crown-funded amenities—schools, bathhouses, and small clinics—kept running to raise general welfare and productivity."
+
+ building_vdev_special_normal_01: "Public Services (Foundations)"
+ building_vdev_special_normal_01_desc: "Basic washhouses and infirmaries improve sanitation and morale among townsfolk."
+
+ building_vdev_special_normal_02: "Public Services (Expansion)"
+ building_vdev_special_normal_02_desc: "Education and healthcare reach outlying parishes under modest royal subsidies."
+
+ building_vdev_special_normal_03: "Public Services (Royal Patronage)"
+ building_vdev_special_normal_03_desc: "Stable, realm-wide civic institutions—costly to maintain, but dependable and popular."
+
+ ### OFFENSIVE — Royal Grainary Complex
+ building_type_vdev_special_offensive_01: "Royal Grainary Complex"
+ building_type_vdev_special_offensive_01_desc: "Fortified storehouses, stables, and a small commissariat ensure rations, fodder, and mules are ready for campaign season."
+
+ building_vdev_special_offensive_01: "Royal Grainary (Storehouses)"
+ building_vdev_special_offensive_01_desc: "Local granaries and stabling improve supply on the march."
+
+ building_vdev_special_offensive_02: "Royal Grainary (Logistics Office)"
+ building_vdev_special_offensive_02_desc: "Clerks track tithes-in-kind and requisitions, easing mobilization."
+
+ building_vdev_special_offensive_03: "Royal Grainary (Military Commissary)"
+ building_vdev_special_offensive_03_desc: "A permanent staff allocates food and pack animals efficiently—effective but expensive to run."
+
+ ### DEFENSIVE — Royal Citadel
+ building_type_vdev_special_defensive_01: "Royal Citadel"
+ building_type_vdev_special_defensive_01_desc: "A reinforced administrative keep housing magistrates and the crown guard. Law is seen, heard, and enforced."
+
+ building_vdev_special_defensive_01: "Royal Citadel (Bastion)"
+ building_vdev_special_defensive_01_desc: "Towers and outerworks turn the keep into a dependable rally point."
+
+ building_vdev_special_defensive_02: "Royal Citadel (Hall of Magistrates)"
+ building_vdev_special_defensive_02_desc: "Courtrooms and records offices strengthen day-to-day order."
+
+ building_vdev_special_defensive_03: "Royal Citadel (Crown Fortress)"
+ building_vdev_special_defensive_03_desc: "A well-garrisoned seat of authority that deters raiders and calms unrest."
+
+ ### HEALTH — Royal Health Faculty
+ building_type_vdev_special_health_01: "Royal Health Faculty"
+ building_type_vdev_special_health_01_desc: "A state-sponsored institute of medicine where anatomy and contagion are studied—useful, if sometimes frowned upon."
+
+ building_vdev_special_health_01: "Health Faculty (Chartered Clinic)"
+ building_vdev_special_health_01_desc: "A small teaching clinic offers care while training apprentices under royal protection."
+
+ building_vdev_special_health_02: "Health Faculty (Research Halls)"
+ building_vdev_special_health_02_desc: "Anatomy studies and trials of new remedies improve outcomes, if not reputations."
+
+ building_vdev_special_health_03: "Health Faculty (Royal Academy of Medicine)"
+ building_vdev_special_health_03_desc: "A respected center of study and treatment whose methods spread through the realm."
+
+ ### INFRASTRUCTURE — Arterial Works
+ building_type_vdev_special_infrastructure_01: "Arterial Works"
+ building_type_vdev_special_infrastructure_01_desc: "Maintained roads, bridges, and waterworks that make travel steadier and markets busier."
+
+ building_vdev_special_infrastructure_01: "Arterial Works (Road Foundations)"
+ building_vdev_special_infrastructure_01_desc: "Key routes are resurfaced and milestones restored; carts roll more reliably."
+
+ building_vdev_special_infrastructure_02: "Arterial Works (Bridges & Aqueducts)"
+ building_vdev_special_infrastructure_02_desc: "Stone bridges and conduits secure crossings and clean water for growing towns."
+
+ building_vdev_special_infrastructure_03: "Arterial Works (Royal Highway Posts)"
+ building_vdev_special_infrastructure_03_desc: "Courier posts and wardens keep the highways open, boosting trade and oversight."

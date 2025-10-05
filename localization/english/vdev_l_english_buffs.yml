@@ -1,0 +1,25 @@
+﻿l_english:
+ ###################################
+### Virtual Development – Scaling Modifiers (Corrected)
+###################################
+
+ MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_NORMAL_LEVEL: "Each level adds: #P +0.5%#! taxes, #P +0.5%#! levy size, and #P +150#! [supply_limit|E]."
+ MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_DEFENSIVE_LEVEL: "Each level adds: #P +0.03#! [fort_level|E], #P +3%#! garrison size, and #P +0.1#! [advantage|E] while defending."
+ MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_OFFENSIVE_LEVEL: "Each level adds: #P +0.5%#! [men_at_arms|E] damage and #P +0.5%#! toughness."
+ MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_HEALTH_LEVEL: "Each level adds: #P +0.1#! [epidemic_resistance|E] and reduces [travel_danger|E] by #N 0.1#!."
+ MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_INFRASTRUCTURE_LEVEL: "Each level reduces construction time and cost by #P 0.3%#! and increases monthly [control|E] growth by #P 0.001#!."
+
+ vdev_tier_scaled_normal: "Virtual Development — Civic Prosperity"
+ vdev_tier_scaled_normal_desc: "Improves taxes, levy size, and [supply_limit|E] per level of virtual development."
+
+ vdev_tier_scaled_defensive: "Virtual Development — Fortress Authority"
+ vdev_tier_scaled_defensive_desc: "Raises [fort_level|E], garrison size, and defensive [advantage|E] per level of defensive virtual development."
+
+ vdev_tier_scaled_offensive: "Virtual Development — Field Readiness"
+ vdev_tier_scaled_offensive_desc: "Boosts [men_at_arms|E] damage and toughness per level of offensive virtual development."
+
+ vdev_tier_scaled_health: "Virtual Development — Medical Progress"
+ vdev_tier_scaled_health_desc: "Improves [epidemic_resistance|E] and lowers [travel_danger|E] per level of health virtual development."
+
+ vdev_tier_scaled_infrastructure: "Virtual Development — Infrastructure Growth"
+ vdev_tier_scaled_infrastructure_desc: "Reduces construction time and cost, and increases monthly [control|E] growth per level of infrastructure virtual development."
