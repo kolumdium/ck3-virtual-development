@@ -25,20 +25,17 @@ vdev_yearly.2 = {
     immediate = {
         # Process ONLY the directly held counties (so each county runs exactly once).
         every_held_county = {
-            init_vdev_offensive = yes
-            increment_vdev_offensive = yes
-            increment_vdev_offensive = yes
-            increment_vdev_offensive = yes
-            increment_vdev_offensive = yes
-            every_county_province = {
-                refresh_vdev_offensive = yes
-            }
+            vdev_init_all = yes
+
             # limit = {
             #         development_level >= 0
             #         # development_level > 10 # avoid stacking buff on 1 development
             #     }
             # Jump to county scope and perform the move/clamp work there.
             test_variable_buff = yes
+            every_county_province = {
+                vdev_refresh_all_province_buffs = yes
+            }
         }
     }
 }

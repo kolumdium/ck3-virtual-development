@@ -40,7 +40,7 @@ my_decision = {
 
     is_valid = {
         prestige_level >= 2
-        scope:barony.county.var:county_vdev_normal > 2
+        scope:barony.county.var:vdev_county_normal > 2
     }
 
     is_valid_showing_failures_only = {

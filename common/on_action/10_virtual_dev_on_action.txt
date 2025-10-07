@@ -1,9 +1,0 @@
-﻿yearly_playable_pulse = {
-    on_actions = { vdev_yearly_transfer }  # no conflicts; just chained in
-}
-
-# Our mod-local on_action. We keep it tiny: only a trigger & event call.
-vdev_yearly_transfer = {
-    trigger = { has_game_rule = vdev_enabled }
-    events = { vdev_yearly.1 }
-}

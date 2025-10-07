@@ -1,7 +1,0 @@
-﻿# once a county reaches 100 development we need to init all values in that county
-init_vdev_all = {
-    init_vdev_normal = yes
-    init_vdev_defensive = yes
-    init_vdev_health = yes
-    init_vdev_infrastructure = yes
-}

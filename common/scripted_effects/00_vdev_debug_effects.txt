@@ -1,0 +1,36 @@
+﻿reduce_development = {
+    change_development_level = minor_development_level_loss
+    # change_vdevelopment_level = yes
+}
+
+test_variable_buff = {
+    vdev_init_all = yes
+
+    vdev_add_to_buff = {
+        BUFF = normal
+        AMOUNT = 100
+    }
+    vdev_add_to_buff = {
+        BUFF = offensive
+        AMOUNT = 13
+    }
+    vdev_add_to_buff = {
+        BUFF = defensive
+        AMOUNT = 100
+    }
+    vdev_add_to_buff = {
+        BUFF = health
+        AMOUNT = 100
+    }
+    vdev_add_to_buff = {
+        BUFF = infrastructure
+        AMOUNT = 100
+    }
+    # vdev_remove_from_buff = {
+    #     BUFF = normal
+    #     AMOUNT = 1
+    # }
+
+    vdev_refresh_all_county_buffs = yes
+
+}

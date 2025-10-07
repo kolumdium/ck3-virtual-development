@@ -1,0 +1,85 @@
+﻿# =========================================
+# Init / Increment / Decrement per category
+# (county scope; adjust caps if you want)
+# =========================================
+
+vdev_init_buff = {
+    set_variable = {
+        name = vdev_county_$BUFF$
+        value = 0
+    }
+}
+
+vdev_increment_buff = {
+    change_variable = { 
+        name = vdev_county_$BUFF$
+        add = 1
+    }
+}
+
+vdev_decrement_buff = {
+    change_variable = {
+        name = vdev_county_$BUFF$
+        subtract = 1
+    }
+}
+
+vdev_add_to_buff = {
+    change_variable = {
+        name = vdev_county_$BUFF$
+        add = $AMOUNT$
+    }
+}
+
+vdev_remove_from_buff = {
+    if = {
+        limit = {
+            var:vdev_county_$BUFF$ >= $AMOUNT$
+        }
+        change_variable = {
+            name = vdev_county_$BUFF$
+            subtract = $AMOUNT$
+        }
+    }
+}
+
+vdev_init_all = {
+    vdev_init_buff = { BUFF = normal}
+    vdev_init_buff = { BUFF = offensive}
+    vdev_init_buff = { BUFF = defensive}
+    vdev_init_buff = { BUFF = health}
+    vdev_init_buff = { BUFF = infrastructure}
+}
+
+# =========================================
+# Refresh: remove+readd the scaled county modifier
+# =========================================
+
+vdev_refresh_county_buff = {
+    remove_county_modifier = vdev_tier_scaled_$BUFF$
+    add_county_modifier = {
+        modifier = vdev_tier_scaled_$BUFF$
+        years = -1
+    }
+}
+
+vdev_refresh_province_buff = {
+    remove_province_modifier = vdev_tier_scaled_$BUFF$
+    add_province_modifier = {
+        modifier = vdev_tier_scaled_$BUFF$
+        years = -1
+    }
+}
+
+#county scope
+vdev_refresh_all_county_buffs = {
+    vdev_refresh_county_buff = { BUFF = normal }
+    vdev_refresh_county_buff = { BUFF = defensive }
+    vdev_refresh_county_buff = { BUFF = health }
+    vdev_refresh_county_buff = { BUFF = infrastructure }
+}
+
+# barony scope
+vdev_refresh_all_province_buffs = {
+    vdev_refresh_province_buff = { BUFF = offensive }
+}

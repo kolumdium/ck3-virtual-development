@@ -24,32 +24,32 @@ vdev_overflow_threshold = {
 # }
 
 vdev_modifier_scaling_value_normal = {
-    value = var:county_vdev_normal
+    value = var:vdev_county_normal
     min = 1
     desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_NORMAL_LEVEL
 }
 
 vdev_modifier_scaling_value_defensive = {
-    value = var:county_vdev_defensive
+    value = var:vdev_county_defensive
     min = 1
     desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_DEFENSIVE_LEVEL
 }
 
 vdev_modifier_scaling_value_offensive = {
-    value = 2
+    value = var:vdev_county_offensive
     min = 1
     max = 100
     desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_OFFENSIVE_LEVEL
 }
 
 vdev_modifier_scaling_value_health = {
-    value = var:county_vdev_health
+    value = var:vdev_county_health
     min = 1
     desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_HEALTH_LEVEL
 }
 
 vdev_modifier_scaling_value_infrastructure = {
-    value = var:county_vdev_infrastructure
+    value = var:vdev_county_infrastructure
     min = 1
     max = 100
     desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_INFRASTRUCTURE_LEVEL
