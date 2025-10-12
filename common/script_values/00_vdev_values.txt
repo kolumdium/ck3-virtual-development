@@ -36,7 +36,7 @@ vdev_modifier_scaling_value_defensive = {
 }
 
 vdev_modifier_scaling_value_offensive = {
-    value = var:vdev_county_offensive
+    value = county.var:vdev_county_offensive
     min = 1
     max = 100
     desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_OFFENSIVE_LEVEL
