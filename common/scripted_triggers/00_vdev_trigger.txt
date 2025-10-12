@@ -1,18 +1,8 @@
-﻿barony_is_valid_for_vdev_order_lease_trigger = {
-    # title_province = {
-	# 	OR = {
-	# 		has_holding_type = castle_holding
-	# 		has_holding_type = city_holding
-	# 	}
-	# }
-    # title_province.county = {
-    #     scope:var.vdev > 2
-    # }
-    #somehow filter those that dont have 10 vdev of the requested type...
-    trigger_if = {
-		limit = {
-			NOT = { holder = $CHARACTER$ }
-		}
-        holder.primary_title.tier = tier_barony
+﻿#root is the barony
+barony_is_valid_for_vdev_convert_trigger = {
+    holder = $CHARACTER$
+    barony.county = {
+        has_variable = vdev_county_normal
+        var:vdev_county_normal > 10
     }
 }

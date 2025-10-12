@@ -32,15 +32,17 @@ my_decision = {
 				}
 			}
 		}
-        # barony_valid = {
-        #     # TODO Filter unvalid once
-        #     # those with to low x or a building in the chain already build.
-        # }
 	}
 
     is_valid = {
-        prestige_level >= 2
-        scope:barony.county.var:vdev_county_normal > 2
+        prestige_level >= 4
+        scope:barony ?= {
+            holder = root
+            county = {
+                has_variable = vdev_county_defensive
+                var:vdev_county_defensive > 2
+            }
+        }
     }
 
     is_valid_showing_failures_only = {
@@ -56,6 +58,6 @@ my_decision = {
         }
     }
 
-    ai_check_interval = -1
-    # ai_potential = {}
+    ai_check_interval = 0
+
 }
