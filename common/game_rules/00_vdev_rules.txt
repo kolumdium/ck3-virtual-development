@@ -6,13 +6,24 @@
     vdev_enabled  = { }
 }
 
-# Virtual Development: overflow preset
-vdev_overflow_preset = {
+# Virtual Development: overflow threshold
+vdev_overflow_threshold_preset = {
     categories = { game_setup }
     default = vdev_threshold_100
 
-    vdev_threshold_100  = { }        # "Small: 5 above 95"
-    vdev_threshold_90 = { }        # "Medium: 10 above 90"
-    vdev_threshold_80    = { }        # "Big: 15 above 85"
-    vdev_threshold_0    = { }        # "Big: 15 above 85"
+    vdev_threshold_100  = { }
+    vdev_threshold_90 = { }
+    vdev_threshold_80    = { }
+    vdev_threshold_51    = { }
+}
+
+# Virtual Development: overflow chunk
+vdev_overflow_chunk_preset = {
+    categories = { game_setup }
+    default = vdev_chunk_25
+
+    vdev_chunk_50  = { }
+    vdev_chunk_25 = { }
+    vdev_chunk_10    = { }
+    vdev_chunk_1    = { }
 }
