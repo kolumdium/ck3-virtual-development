@@ -83,3 +83,33 @@ vdev_refresh_all_county_buffs = {
 vdev_refresh_all_province_buffs = {
     vdev_refresh_province_buff = { BUFF = offensive }
 }
+
+# =========================================
+# Convert: Reduce one type of buff for increase in another
+# =========================================
+
+vdev_convert_amount_of_buff_to_another = {
+    if = {
+        limit = {
+            var:vdev_county_$BUFF$ >= $AMOUNT$
+        }
+        change_variable = {
+            name = vdev_county_$BUFF$
+            subtract = $AMOUNT$
+        }
+        vdev_add_to_buff = {
+            BUFF = $ANOTHER$
+            AMOUNT = $AMOUNT$
+        }
+    }
+}
+
+vdev_convert_10_normal_to_other_buff = {
+    vdev_convert_amount_of_buff_to_another = {
+        AMOUNT = 10
+        BUFF = normal
+        ANOTHER = $OTHERBUFF$
+    }
+    vdev_refresh_county_buff = { BUFF = normal }
+    vdev_refresh_county_buff = { BUFF = $OTHERBUFF$ }
+}
