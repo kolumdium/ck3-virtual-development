@@ -35,11 +35,11 @@ vdev_tier_scaled_defensive = {
 # Target: strong stationed MAA @100
 # =========================================
 vdev_tier_scaled_offensive = {
-    stationed_maa_damage_mult    = 0.5   # +50% @100
-    stationed_maa_toughness_mult = 0.5   # +50% @100
+    stationed_maa_damage_mult    = 0.005   # +50% @100
+    stationed_maa_toughness_mult = 0.005   # +50% @100
     icon = prowess_positive
     scale = {
-        value = barony.county.var:vdev_modifier_scaling_value_offensive
+        value = vdev_modifier_scaling_value_offensive
         desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_OFFENSIVE_LEVEL
         display_mode = scaled
     }
