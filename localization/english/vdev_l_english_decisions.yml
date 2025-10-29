@@ -1,1 +1,13 @@
 ﻿l_english:
+ vdev_change_barony_focus_decision_title: "Change Barony Focus"
+ vdev_change_barony_focus_decision_desc: "Changes the focus of the selected barony. This determines what the normal development is converted to."
+ vdev_change_barony_focus_decision_confirm: "Change Focus"
+ vdev_change_barony_focus_decision_tooltip: "Changes the focus of the selected barony. This determines what the normal development is converted to."
+ vdev_change_all_barony_focus_decision_title: "Change Every Barony Focus"
+ vdev_change_all_barony_focus_decision_desc: "Changes the focus of every held barony. This determines what the normal development is converted to."
+ vdev_change_all_barony_focus_decision_confirm: "Change Focus"
+ vdev_change_all_barony_focus_decision_tooltip: "Changes the focus every held barony. This determines what the normal development is converted to."
+ vdev_add_barony_building_decision_title: "Build vdev Building"
+ vdev_add_barony_building_decision_desc: "Starts an event to build a new vdev building in a selected barony if possible."
+ vdev_add_barony_building_decision_confirm: "Select Building"
+ vdev_add_barony_building_decision_tooltip: "Starts an event to build a new vdev building in a selected barony if possible."

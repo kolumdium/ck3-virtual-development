@@ -1,0 +1,32 @@
+﻿l_english:
+ rule_vdev_overflow_threshold_preset: "Vdev Threshold Setting"
+ setting_vdev_threshold_100: "Threshold: 100"
+ setting_vdev_threshold_100_desc: "Only [development|E] above #V 100#! is converted."
+
+ setting_vdev_threshold_90: "Threshold: 90"
+ setting_vdev_threshold_90_desc: "Convert [development|E] above #V 90#!."
+
+ setting_vdev_threshold_80: "Threshold: 80"
+ setting_vdev_threshold_80_desc: "Convert [development|E] above #V 80#!."
+
+ setting_vdev_threshold_51: "Threshold: 51"
+ setting_vdev_threshold_51_desc: "Convert any [development|E] above #V 51#!."
+
+ setting_vdev_threshold_0: "Threshold: 0"
+ setting_vdev_threshold_0_desc: "Convert any [development|E] above #V 0#! (maximal overflow)."
+
+ rule_vdev_overflow_chunk_preset: "Vdev Chunk Setting"
+ setting_vdev_chunk_50: "Development converted at once: 50"
+ setting_vdev_chunk_50_desc: "Convert 50 Development at once to Virtual Development."
+ setting_vdev_chunk_25: "Development converted at once: 25"
+ setting_vdev_chunk_25_desc: "Convert 25 Development at once to Virtual Development."
+ setting_vdev_chunk_10: "Development converted at once: 10"
+ setting_vdev_chunk_10_desc: "Convert 10 Development at once to Virtual Development."
+ setting_vdev_chunk_1: "Development converted at once: 1"
+ setting_vdev_chunk_1_desc: "Convert 1 Development at once to Virtual Development. (I don't recommend this but it could limit the amount of buffs you get per year for some extra challenge.)"
+
+ rule_vdev_ai_buff_preset: "AI Conversion"
+ setting_vdev_ai_buff_random: "Random Convertion for AI"
+ setting_vdev_ai_buff_random_desc: "The Focus of a county gets randomized for the ai each year. It will get all buffs more or less equally this way."
+ setting_vdev_ai_buff_just_normal: "Only Normal Buff for AI"
+ setting_vdev_ai_buff_just_normal_desc: "The AI will only convert to 'normal' Virtual Development. This mirrors normal Development the best."

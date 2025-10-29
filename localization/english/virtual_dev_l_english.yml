@@ -11,18 +11,6 @@
  rule_vdev_overflow_preset: "Virtual Development: Overflow Threshold"
  rule_vdev_overflow_preset_desc: "Controls how much real [development|E] is converted to Virtual Development during the yearly sweep."
 
- setting_vdev_threshold_100: "Threshold: 100"
- setting_vdev_threshold_100_desc: "Only [development|E] above #V 100#! is converted."
-
- setting_vdev_threshold_90: "Threshold: 90"
- setting_vdev_threshold_90_desc: "Convert [development|E] above #V 90#!."
-
- setting_vdev_threshold_80: "Threshold: 80"
- setting_vdev_threshold_80_desc: "Convert [development|E] above #V 80#!."
-
- setting_vdev_threshold_0: "Threshold: 0"
- setting_vdev_threshold_0_desc: "Convert any [development|E] above #V 0#! (maximal overflow)."
-
  vdev_tier_0: "Virtual Development (0)"
  vdev_tier_0_desc: "No bonus from Virtual Development."
 

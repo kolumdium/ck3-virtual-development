@@ -263,6 +263,6 @@ vdev_county.3 = {
         }
     }
     option = {
-        name = aaa
+        name = vdev_add_building_event.1.f
     }
 }
