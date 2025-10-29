@@ -1,37 +1,75 @@
 ﻿# Events run from the on_yearly_pulse on_action
-namespace = vdev_yearly
+namespace = vdev_yearly_test
 
-vdev_yearly.1 = {
+vdev_yearly_test.1 = {
     type = character_event
     hidden = yes
 
     immediate = {
         # Process ONLY the directly held counties (so each county runs exactly once).
         every_held_county = {
+            change_development_level = 100
             limit = {
-                    development_level >= vdev_overflow_threshold
-                    # development_level > 10 # avoid stacking buff on 1 development
+                    development_level >= 10
+                    # development_level > 10
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = vdev_county_normal
+                    }
                 }
-            # Jump to county scope and perform the move/clamp work there.
-            reduce_development = yes
+                vdev_init_all = yes
+            }
+            county.holder = {
+                if = {
+                    limit = {
+                        NOT = {
+                            has_trait = vdev_developer_trait
+                        }
+                    }
+                    add_trait = vdev_developer_trait
+                }
+            }
+
+            change_development_level = -10
+
+            vdev_add_to_buff = {
+                BUFF = normal
+                AMOUNT = 10
+            }
+
+            vdev_convert_amount_of_buff_to_another = {
+                BUFF = normal
+                ANOTHER = health
+                AMOUNT = 10
+            }
+            vdev_refresh_county_buff = { BUFF = normal }
+            vdev_refresh_county_buff = { BUFF = health }
+
+            county.holder = {
+                if = {
+                    limit = {
+                        has_trait = vdev_developer_trait
+                    }
+                    add_trait_xp = {
+                        trait = vdev_developer_trait
+                        track = vdev_normal
+                        value = 2.5
+                    }
+                }
+            }
         }
     }
 }
 
-vdev_yearly.2 = {
+vdev_yearly_test.2 = {
     type = character_event
     hidden = yes
 
     immediate = {
-        # Process ONLY the directly held counties (so each county runs exactly once).
         every_held_county = {
             vdev_init_all = yes
-
-            # limit = {
-            #         development_level >= 0
-            #         # development_level > 10 # avoid stacking buff on 1 development
-            #     }
-            # Jump to county scope and perform the move/clamp work there.
             test_variable_buff = yes
             every_county_province = {
                 vdev_refresh_all_province_buffs = yes
@@ -40,11 +78,65 @@ vdev_yearly.2 = {
     }
 }
 
-vdev_yearly.3 = {
+vdev_yearly_test.3 = {
     type = character_event
     hidden = yes
 
     immediate = {
-        add_trait = virtual_developer_trait
+        add_trait = vdev_developer_trait
     }
 }
+
+# vdev_convert_event.1 = {
+#     type = character_event
+#     hidden = no
+
+#     theme = education
+#     left_portrait = {
+#         character = root
+#         animation = root
+#     }
+
+#     option = {
+#         name = vdev_convert_event.1.a
+        
+#     }
+vdev_yearly_test.4 = {
+    type = character_event
+    hidden = yes
+
+    immediate = {
+        # Process ONLY the directly held counties (so each county runs exactly once).
+        every_held_county = {
+            limit = {
+                    development_level >= 10
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = vdev_county_normal
+                    }
+                }
+                vdev_init_all = yes
+            }
+
+            change_development_level = vdev_overflow_chunk
+
+            # if this is triggered not by the player and the gamerule is set to random, randomize the counties focus
+            if = {
+                limit = {
+                    county.holder = {
+                        is_ai = yes
+                    }
+                    has_game_rule = vdev_ai_buff_random
+                }
+                vdev_set_county_focus_random = yes
+            }
+
+            vdev_add_amount_of_buff_by_focus = {
+                AMOUNT = vdev_overflow_chunk
+            }
+        }
+    }
+}
+# }

@@ -1,0 +1,68 @@
+﻿namespace = vdev_convert
+
+vdev_convert.1 = {
+    type = character_event
+    # scope = landed_title
+    hidden = no
+
+    theme = education
+
+    option = {
+        name = vdev_convert_county_vdev_event.1.a
+        scope:barony?= {
+            county = {
+                vdev_convert_amount_of_buff_to_another = {
+                    BUFF = normal
+                    ANOTHER = offensive
+                    AMOUNT = vdev_overflow_chunk
+                }
+                vdev_refresh_county_buff = { BUFF = normal }
+                every_county_province = {
+                    vdev_refresh_all_province_buffs = yes
+                }
+            }
+        }
+    }
+    option = {
+        name = vdev_convert_county_vdev_event.1.b
+        scope:barony ?= {
+            county = {
+                vdev_convert_amount_of_buff_to_another = {
+                    BUFF = normal
+                    ANOTHER = defensive
+                    AMOUNT = vdev_overflow_chunk
+                }
+                vdev_refresh_county_buff = { BUFF = normal }
+                vdev_refresh_county_buff = { BUFF = defensive }
+            }
+        }
+    }
+    option = {
+        name = vdev_convert_county_vdev_event.1.c
+        scope:barony ?= {
+            county = {
+                vdev_convert_amount_of_buff_to_another = {
+                    BUFF = normal
+                    ANOTHER = health
+                    AMOUNT = vdev_overflow_chunk
+                }
+                vdev_refresh_county_buff = { BUFF = normal }
+                vdev_refresh_county_buff = { BUFF = health }
+            }
+        }
+    }
+    option = {
+        name = vdev_convert_county_vdev_event.1.d
+        scope:barony ?= {
+            county = {
+                vdev_convert_amount_of_buff_to_another = {
+                    BUFF = normal
+                    ANOTHER = infrastructure
+                    AMOUNT = vdev_overflow_chunk
+                }
+                vdev_refresh_county_buff = { BUFF = normal }
+                vdev_refresh_county_buff = { BUFF = infrastructure }
+            }
+        }
+    }
+}

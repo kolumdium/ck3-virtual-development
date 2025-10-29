@@ -1,0 +1,48 @@
+﻿namespace = vdev_yearly
+
+vdev_yearly.1 = {
+    type = character_event
+    hidden = yes
+
+    immediate = {
+        every_held_county = {
+            limit = {
+                development_level >= vdev_overflow_threshold
+            }
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = vdev_county_normal
+                    }
+                }
+                vdev_init_all = yes
+            }
+
+
+            change_development_level = vdev_overflow_chunk
+
+            # if this is triggered not by the player and the gamerule is set to random, randomize the counties focus
+            county.holder = {
+                if = {
+                    limit = {
+                        is_ai = yes
+                        has_game_rule = vdev_ai_buff_random
+                    }
+                }
+                vdev_set_county_focus_random = yes
+                if = {
+                    limit = {
+                        NOT = {
+                            has_trait = vdev_developer_trait
+                        }
+                    }
+                    add_trait = vdev_developer_trait
+                }
+            }
+
+            vdev_add_amount_of_buff_by_focus = {
+                AMOUNT = vdev_overflow_chunk
+            }
+        }
+    }
+}
