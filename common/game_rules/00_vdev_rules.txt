@@ -27,3 +27,12 @@ vdev_overflow_chunk_preset = {
     vdev_chunk_10    = { }
     vdev_chunk_1    = { }
 }
+
+# Virtual Development: does AI get random buffs
+vdev_ai_buff_preset = {
+    categories = { game_setup }
+    default = vdev_ai_buff_random
+
+    vdev_ai_buff_random = { }
+    vdev_ai_buff_just_normal = { }
+}
