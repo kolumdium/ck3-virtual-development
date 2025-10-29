@@ -1,5 +1,5 @@
 ﻿reduce_development = {
-    change_development_level = minor_development_level_loss
+    change_development_level = -10
     # change_vdevelopment_level = yes
 }
 
@@ -12,7 +12,7 @@ test_variable_buff = {
     }
     vdev_add_to_buff = {
         BUFF = offensive
-        AMOUNT = 13
+        AMOUNT = 102
     }
     vdev_add_to_buff = {
         BUFF = defensive

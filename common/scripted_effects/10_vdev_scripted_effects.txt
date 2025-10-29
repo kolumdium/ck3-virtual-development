@@ -31,6 +31,13 @@ vdev_add_to_buff = {
     }
 }
 
+vdev_add_to_buff_n = {
+    change_variable = {
+        name = vdev_county_$BUFF$
+        subtract = $AMOUNT$
+    }
+}
+
 vdev_remove_from_buff = {
     if = {
         limit = {
@@ -43,12 +50,20 @@ vdev_remove_from_buff = {
     }
 }
 
+vdev_init_focus = {
+    set_variable = {
+        name = vdev_county_focus
+        value = 0
+    }
+}
+
 vdev_init_all = {
     vdev_init_buff = { BUFF = normal}
     vdev_init_buff = { BUFF = offensive}
     vdev_init_buff = { BUFF = defensive}
     vdev_init_buff = { BUFF = health}
     vdev_init_buff = { BUFF = infrastructure}
+    vdev_init_focus = yes
 }
 
 # =========================================
@@ -84,6 +99,7 @@ vdev_refresh_all_province_buffs = {
     vdev_refresh_province_buff = { BUFF = offensive }
 }
 
+
 # =========================================
 # Convert: Reduce one type of buff for increase in another
 # =========================================
@@ -104,12 +120,138 @@ vdev_convert_amount_of_buff_to_another = {
     }
 }
 
-vdev_convert_10_normal_to_other_buff = {
-    vdev_convert_amount_of_buff_to_another = {
-        AMOUNT = 10
-        BUFF = normal
-        ANOTHER = $OTHERBUFF$
+# vdev_convert_10_normal_to_other_buff = {
+#     vdev_convert_amount_of_buff_to_another = {
+#         AMOUNT = 10
+#         BUFF = normal
+#         ANOTHER = $OTHERBUFF$
+#     }
+#     vdev_refresh_county_buff = { BUFF = normal }
+#     vdev_refresh_county_buff = { BUFF = $OTHERBUFF$ }
+# }
+
+# =========================================
+# Focus: Set the Focus of a county
+# =========================================
+
+vdev_set_county_focus = {
+    set_variable = {
+        name = vdev_county_focus
+        value = $FOCUS$
     }
-    vdev_refresh_county_buff = { BUFF = normal }
-    vdev_refresh_county_buff = { BUFF = $OTHERBUFF$ }
+}
+
+vdev_set_county_focus_random = {
+    random_list = {
+        1 = { vdev_set_county_focus = { FOCUS = 0}}
+        1 = { vdev_set_county_focus = { FOCUS = 1}}
+        1 = { vdev_set_county_focus = { FOCUS = 2}}
+        1 = { vdev_set_county_focus = { FOCUS = 3}}
+        1 = { vdev_set_county_focus = { FOCUS = 4}}
+    }
+}
+
+# =========================================
+# Focus: Set the Buff by focus
+# =========================================
+
+vdev_add_amount_of_buff_by_focus = {
+    if = {
+        limit = {
+            var:vdev_county_focus = 0
+        }
+        vdev_add_to_buff_n = {
+            BUFF = normal
+            AMOUNT = $AMOUNT$
+        }
+        vdev_refresh_county_buff = { BUFF = normal }
+
+        vdev_add_trait_xp = {
+            BUFF = normal
+            AMOUNT = $AMOUNT$
+        }
+    }
+    else_if = {
+        limit = {
+            var:vdev_county_focus = 1
+        }
+        vdev_add_to_buff_n = {
+            BUFF = offensive
+            AMOUNT = $AMOUNT$
+        }
+        every_county_province = {
+            vdev_refresh_province_buff = { BUFF = offensive }
+        }
+        vdev_add_trait_xp = {
+            BUFF = offensive
+            AMOUNT = $AMOUNT$
+        }
+
+    }
+    else_if = {
+        limit = {
+            var:vdev_county_focus = 2
+        }
+        vdev_add_to_buff_n = {
+            BUFF = defensive
+            AMOUNT = $AMOUNT$
+        }
+        vdev_refresh_county_buff = { BUFF = defensive }
+
+        vdev_add_trait_xp = {
+            BUFF = defensive
+            AMOUNT = $AMOUNT$
+        }
+    }
+    else_if = {
+        limit = {
+            var:vdev_county_focus = 3
+        }
+        vdev_add_to_buff_n = {
+            BUFF = health
+            AMOUNT = $AMOUNT$
+        }
+        vdev_refresh_county_buff = { BUFF = health }
+
+        vdev_add_trait_xp = {
+            BUFF = health
+            AMOUNT = $AMOUNT$
+        }
+    }
+    else_if = {
+        limit = {
+            var:vdev_county_focus = 4
+        }
+        vdev_add_to_buff_n = {
+            BUFF = infrastructure
+            AMOUNT = $AMOUNT$
+        }
+        vdev_refresh_county_buff = { BUFF = infrastructure }
+
+        vdev_add_trait_xp = {
+            BUFF = infrastructure
+            AMOUNT = $AMOUNT$
+        }
+    }
+    else = {
+        debug_log = "Something went wrong."
+    }
+}
+
+vdev_add_trait_xp = {
+    county.holder = {
+        if = {
+            limit = {
+                has_trait = vdev_developer_trait
+            }
+            add_trait_xp = {
+                trait = vdev_developer_trait
+                track = vdev_$BUFF$
+                value = {
+                    value = $AMOUNT$
+                    multiply = -0.1
+                }
+            }
+        }
+    }
 }

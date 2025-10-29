@@ -17,19 +17,19 @@ vdev_overflow_threshold = {
 }
 
 vdev_overflow_chunk = {
-    value = 10
+    value = -10
 
     if = {
         limit = {
             has_game_rule = vdev_chunk_50
         }
-        value = 50
+        value = -50
     }
     else_if = {
         limit = {
             has_game_rule = vdev_chunk_25
         }
-        value = 25
+        value = -25
     }
     # else_if = { # default
     #     limit = {
@@ -40,6 +40,16 @@ vdev_overflow_chunk = {
     else_if = {
         limit = {
             has_game_rule = vdev_chunk_1
+        }
+        value = -1
+    }
+}
+
+vdev_ai_random = {
+    value = 0
+    if = {
+        limit = {
+            has_game_rule = vdev_ai_buff_random
         }
         value = 1
     }

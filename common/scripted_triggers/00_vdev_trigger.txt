@@ -6,3 +6,11 @@ barony_is_valid_for_vdev_convert_trigger = {
         var:vdev_county_normal > 10
     }
 }
+
+barony_has_valid_vdev_amount_trigger = {
+    holder = $CHARACTER$
+    barony.county = {
+        has_variable = $BUFF$
+        var:$BUFF$ >= $AMOUNT$
+    }
+}
