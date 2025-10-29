@@ -1,6 +1,6 @@
 ﻿l_english:
- trait_virtual_developer_trait: "Virtual Developer"
- trait_virtual_developer_trait_desc: "Channels surplus [development|E] into a higher order of organization, converting prosperity into realm-wide advantages."
+ trait_vdev_developer_trait: "Virtual Developer"
+ trait_vdev_developer_trait_desc: "Channels surplus [development|E] into a higher order of organization, converting prosperity into realm-wide advantages."
 
  trait_track_vdev_normal: "Civic Prosperity"
  trait_track_vdev_normal_desc: "Direct resources into markets, granaries, and stewardship to grow revenue and manage more domains at once."
@@ -14,8 +14,8 @@
  trait_track_vdev_health: "Medical Progress"
  trait_track_vdev_health_desc: "Back healers and sanitation to resist outbreaks and gain personal health benefits. Who would have guessed that helping the plebs can help you as well?"
 
- trait_track_vdev_infrastucture: "Administrative Works"
- trait_track_vdev_infrastucture_desc: "Fund roads and canals to make traveling easier and vassals happier that you looked out for them. Makes it easier for legends to spread and easier to move troops and materials."
+ trait_track_vdev_infrastructure: "Administrative Works"
+ trait_track_vdev_infrastructure_desc: "Fund roads and canals to make traveling easier and vassals happier that you looked out for them. Makes it easier for legends to spread and easier to move troops and materials."
 
  trait_vdever_desc: "Where others see limits, you see slack to be woven into strength."
  trait_vdever_character_desc: "[ROOT.GetCharacter.GetFirstNameNoTooltip] converts overflow [development|E] into lasting advantages across the realm."
