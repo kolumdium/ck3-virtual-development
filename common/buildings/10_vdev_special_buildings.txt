@@ -17,7 +17,7 @@ vdev_special_normal_01 = {
         monthly_lifestyle_xp_gain_mult = 0.05
         monthly_prestige = 0.1
         monthly_piety = 0.2
-        owned_legend_spread_mult = 10
+        owned_legend_spread_mult = 0.10
     }
 
     province_modifier = {
@@ -47,7 +47,7 @@ vdev_special_normal_02 = {
         monthly_lifestyle_xp_gain_mult = 0.1
         monthly_prestige = 0.2
         monthly_piety = 0.4
-        owned_legend_spread_mult = 20
+        owned_legend_spread_mult = 0.20
     }
 
     province_modifier = {
@@ -77,7 +77,7 @@ vdev_special_normal_03 = {
         monthly_lifestyle_xp_gain_mult = 0.15
         monthly_prestige = 0.3
         monthly_piety = 0.6
-        owned_legend_spread_mult = 30
+        owned_legend_spread_mult = 0.30
     }
 
     province_modifier = {
@@ -90,36 +90,36 @@ vdev_special_normal_03 = {
         county_opinion_add = 30
     }
 
-    next_building = vdev_special_normal_04
+    # next_building = vdev_special_normal_04
 }
 
-vdev_special_normal_04 = {
-    construction_time = very_slow_construction_time
+# vdev_special_normal_04 = {
+#     construction_time = very_slow_construction_time
 
-    can_construct_potential = { building_requirement_castle_city_church = { LEVEL = 01 } }
-    can_construct_showing_failures_only = { building_requirement_tribal = no }
-    show_disabled = yes
+#     can_construct_potential = { building_requirement_castle_city_church = { LEVEL = 01 } }
+#     can_construct_showing_failures_only = { building_requirement_tribal = no }
+#     show_disabled = yes
 
-    cost_gold = expensive_building_tier_8_cost
-    type_icon = "icon_building_hospice.dds"
+#     cost_gold = expensive_building_tier_8_cost
+#     type_icon = "icon_building_hospice.dds"
 
-    county_holder_character_modifier = {
-        monthly_lifestyle_xp_gain_mult = 0.15
-        monthly_prestige = 0.3
-        monthly_piety = 0.6
-        owned_legend_spread_mult = 30
-    }
+#     county_holder_character_modifier = {
+#         monthly_lifestyle_xp_gain_mult = 0.15
+#         monthly_prestige = 0.3
+#         monthly_piety = 0.6
+#         owned_legend_spread_mult = 0.30
+#     }
 
-    province_modifier = {
-        monthly_income = -1.5
-    }
+#     province_modifier = {
+#         monthly_income = -1.5
+#     }
 
-    county_modifier = {
-        development_growth_factor = normal_building_development_growth_factor_tier_6  # ~+0.08
-        development_growth = normal_building_development_growth_tier_6
-        county_opinion_add = 30
-    }
-}
+#     county_modifier = {
+#         development_growth_factor = normal_building_development_growth_factor_tier_6  # ~+0.08
+#         development_growth = normal_building_development_growth_tier_6
+#         county_opinion_add = 30
+#     }
+# }
 
 ###################################
 ### Offensive                   ###
