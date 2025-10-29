@@ -1,0 +1,90 @@
+﻿# we need to make sure the vdev variable exist before checking in this decision.
+vdev_change_barony_focus_decision = {
+    title = vdev_change_barony_focus_decision_title
+
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+    desc = vdev_change_barony_focus_decision_desc
+
+    decision_group_type = realm
+    sort_order = 100
+
+    cooldown = { days = 0 }
+
+    is_shown = {
+        is_landless_adventurer = no
+    }
+
+    widget = {
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+                holder = scope:ruler
+			}
+			trigger_else = {
+				custom_description = {
+					text = "has_holy_order_barony_selected"
+					always = no
+				}
+			}
+		}
+	}
+
+    is_valid = {
+        scope:barony ?= {
+            holder = root
+            county = {
+                has_variable = vdev_county_focus
+            }
+        }
+    }
+
+    is_valid_showing_failures_only = {
+        is_ruler = yes
+        is_available_adult = yes
+        is_at_war = no
+        is_imprisoned = no
+    }
+
+    effect = {
+        trigger_event = vdev_county.1
+    }
+
+    cost = {
+        gold = 25
+    }
+
+    ai_check_interval = 0
+}
+
+# Set the focus of ALL baronies to one of the buffs
+vdev_change_all_barony_focus_decision = {
+    title = vdev_change_all_barony_focus_decision_title
+
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+
+    desc = vdev_change_all_barony_focus_decision_desc
+
+    decision_group_type = realm
+    sort_order = 99
+
+    cooldown = { days = 0 }
+
+    is_shown = {
+        is_landless_adventurer = no
+    }
+    
+    effect = {
+        trigger_event = vdev_county.2
+    }
+
+    cost = {
+        gold = 1000
+    }
+
+    ai_check_interval = 0
+}

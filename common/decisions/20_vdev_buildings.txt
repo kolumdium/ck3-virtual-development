@@ -1,18 +1,16 @@
-﻿@test_decision_cooldown_time = 0
-
-# we need to make sure the vdev variable exist before checking in this decision.
-my_decision = {
-    title = decision_title
+﻿# Buildings
+vdev_add_barony_building_decision = {
+    title = vdev_add_barony_building_decision_title
 
     picture = {
         reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
     }
-    desc = decision_desc
+    desc = vdev_add_barony_building_decision_desc
 
     decision_group_type = realm
-    sort_order = 100
+    sort_order = 98
 
-    cooldown = { days = @test_decision_cooldown_time }
+    cooldown = { days = 0 }
 
     is_shown = {
         is_landless_adventurer = no
@@ -23,7 +21,7 @@ my_decision = {
 		barony_valid = {
 			trigger_if = {
 				limit = { exists = this }
-				barony_is_valid_for_vdev_convert_trigger = { CHARACTER = scope:ruler }
+                holder = scope:ruler
 			}
 			trigger_else = {
 				custom_description = {
@@ -35,12 +33,16 @@ my_decision = {
 	}
 
     is_valid = {
-        prestige_level >= 4
         scope:barony ?= {
             holder = root
             county = {
-                has_variable = vdev_county_defensive
-                var:vdev_county_defensive > 2
+                OR = {
+                    var:vdev_county_normal >= 25
+                    var:vdev_county_offensive >= 25
+                    var:vdev_county_defensive >= 25
+                    var:vdev_county_health >= 25
+                    var:vdev_county_infrastructure >= 25
+                }
             }
         }
     }
@@ -53,11 +55,14 @@ my_decision = {
     }
 
     effect = {
-        scope:barony.title_province = {
-            add_building = vdev_special_normal_01
-        }
+        trigger_event = vdev_county.3
+    }
+
+    cost = {
+        gold = 1000
     }
 
     ai_check_interval = 0
-
+    # ai_potential = 0
+    # ai_will_do = 0
 }
