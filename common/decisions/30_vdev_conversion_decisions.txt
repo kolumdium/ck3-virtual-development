@@ -1,0 +1,57 @@
+﻿# Set the focus of ALL baronies to one of the buffs
+vdev_convert_vdev_decision = {
+    title = vdev_convert_vdev_decision_title
+
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+
+    desc = vdev_convert_vdev_decision_desc
+
+    decision_group_type = vdev_decision_group
+    sort_order = 99
+
+    cooldown = { days = 0 }
+
+    is_shown = {
+        is_landless_adventurer = no
+    }
+
+    widget = {
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+                holder = scope:ruler
+			}
+			trigger_else = {
+				custom_description = {
+					text = "has_holy_order_barony_selected"
+					always = no
+				}
+			}
+		}
+	}
+
+    is_valid = {
+        scope:barony ?= {
+            holder = root
+            custom_description = {
+                text = "vdev_convert_vdev_decision_variables_fit"
+                county = {
+                    var:vdev_county_normal >= 25
+                }
+            }
+        }
+    }
+    
+    effect = {
+        trigger_event = vdev_convert.1
+    }
+
+    cost = {
+        gold = vdev_convert_vdev_gold_cost
+    }
+
+    ai_check_interval = 0
+}

@@ -1,0 +1,4 @@
+﻿vdev_decision_group = {
+	sort_order = 102
+	gui_tags = { big_button }
+}

@@ -7,7 +7,7 @@ vdev_change_barony_focus_decision = {
     }
     desc = vdev_change_barony_focus_decision_desc
 
-    decision_group_type = realm
+    decision_group_type = vdev_decision_group
     sort_order = 100
 
     cooldown = { days = 0 }
@@ -33,13 +33,17 @@ vdev_change_barony_focus_decision = {
 	}
 
     is_valid = {
-        scope:barony ?= {
-            holder = root
-            county = {
-                has_variable = vdev_county_focus
+            scope:barony ?= {
+                holder = root
+                custom_description = {
+                    text = "vdev_has_barony_focus"
+                    county = {
+                        has_variable = vdev_county_focus
+                    }
+                }
             }
-        }
     }
+
 
     is_valid_showing_failures_only = {
         is_ruler = yes
@@ -53,7 +57,7 @@ vdev_change_barony_focus_decision = {
     }
 
     cost = {
-        gold = 25
+        gold = vdev_focus_change_gold_cost
     }
 
     ai_check_interval = 0
@@ -69,7 +73,7 @@ vdev_change_all_barony_focus_decision = {
 
     desc = vdev_change_all_barony_focus_decision_desc
 
-    decision_group_type = realm
+    decision_group_type = vdev_decision_group
     sort_order = 99
 
     cooldown = { days = 0 }
@@ -83,7 +87,7 @@ vdev_change_all_barony_focus_decision = {
     }
 
     cost = {
-        gold = 1000
+        gold = vdev_focus_change_gold_cost_all
     }
 
     ai_check_interval = 0

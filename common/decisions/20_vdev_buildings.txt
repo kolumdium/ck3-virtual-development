@@ -7,7 +7,7 @@ vdev_add_barony_building_decision = {
     }
     desc = vdev_add_barony_building_decision_desc
 
-    decision_group_type = realm
+    decision_group_type = vdev_decision_group
     sort_order = 98
 
     cooldown = { days = 0 }
@@ -35,14 +35,20 @@ vdev_add_barony_building_decision = {
     is_valid = {
         scope:barony ?= {
             holder = root
-            county = {
-                OR = {
-                    var:vdev_county_normal >= 25
-                    var:vdev_county_offensive >= 25
-                    var:vdev_county_defensive >= 25
-                    var:vdev_county_health >= 25
-                    var:vdev_county_infrastructure >= 25
+            custom_description = {
+                text = "vdev_add_barony_building_decision_variables_fit"
+                county = {
+                    OR = {
+                        var:vdev_county_normal >= 25
+                        var:vdev_county_offensive >= 25
+                        var:vdev_county_defensive >= 25
+                        var:vdev_county_health >= 25
+                        var:vdev_county_infrastructure >= 25
+                    }
                 }
+            }
+            title_province = {
+                free_building_slots > 0
             }
         }
     }
@@ -55,14 +61,84 @@ vdev_add_barony_building_decision = {
     }
 
     effect = {
-        trigger_event = vdev_county.3
+        trigger_event = vdev_building_event.1
     }
 
     cost = {
-        gold = 1000
+        gold = vdev_building_gold_cost
     }
 
     ai_check_interval = 0
     # ai_potential = 0
     # ai_will_do = 0
+}
+
+# building slots
+vdev_add_barony_building_slot_decision = {
+    title = vdev_add_barony_building_slot_decision_title
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+    desc = vdev_add_barony_building_slot_decision_desc
+    decision_group_type = vdev_decision_group
+    sort_order = 97
+
+    cooldown = { days = 0 }
+
+    is_shown = {
+        is_landless_adventurer = no
+    }
+
+    widget = {
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+                holder = scope:ruler
+			}
+			trigger_else = {
+				custom_description = {
+					text = "has_holy_order_barony_selected"
+					always = no
+				}
+			}
+		}
+	}
+
+    is_valid_showing_failures_only = {
+        is_ruler = yes
+        is_available_adult = yes
+        is_at_war = no
+        is_imprisoned = no
+    }
+
+    is_valid = {
+        scope:barony ?= {
+            holder = root
+            custom_description = {
+                text = "vdev_add_barony_building_slot_decision_variables_fit"
+                county = {
+                    has_variable = vdev_county_normal
+                    var:vdev_county_normal >= vdev_building_slot_vdev_cost
+                    var:vdev_extra_building_slots < 5
+                }
+            }
+            NOT = {
+                title_province = {
+                    building_slots > define:NProvince|MAX_BUILDINGS
+                }
+            }
+        }
+    }
+
+    cost = {
+        gold = vdev_building_slot_gold_cost
+    }
+
+    effect = {
+        trigger_event = vdev_building_event.2
+    }
+
+    ai_check_interval = 0
+
 }
