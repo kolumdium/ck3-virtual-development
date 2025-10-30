@@ -1,0 +1,3 @@
+﻿NProvince = {
+    MAX_BUILDINGS = 20
+}
