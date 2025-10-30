@@ -1,0 +1,5 @@
+﻿l_english:
+ vdev_add_barony_building_slot_decision_variables_fit: "This Barony is developed enough to harbour more buildings."
+ vdev_add_barony_building_decision_variables_fit: "This Barony is developed enough to harbour a special building."
+ vdev_has_barony_focus: "This Barony is able to set a focus."
+ vdev_convert_vdev_decision_variables_fit: "The barony has enough normal Virtual Development to convert."

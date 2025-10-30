@@ -1,4 +1,5 @@
 ﻿l_english:
+ game_rule_category_vdev_game_setup: "Vdev Settings"
  rule_vdev_overflow_threshold_preset: "Vdev Threshold Setting"
  setting_vdev_threshold_100: "Threshold: 100"
  setting_vdev_threshold_100_desc: "Only [development|E] above #V 100#! is converted."
@@ -30,3 +31,13 @@
  setting_vdev_ai_buff_random_desc: "The Focus of a county gets randomized for the ai each year. It will get all buffs more or less equally this way."
  setting_vdev_ai_buff_just_normal: "Only Normal Buff for AI"
  setting_vdev_ai_buff_just_normal_desc: "The AI will only convert to 'normal' Virtual Development. This mirrors normal Development the best."
+
+ rule_vdev_new_slot_scaling_cost_preset: "Set the how much more expensive later slots will be. They cost normal vdev."
+ setting_vdev_slot_scaling_0: "vdev slot scaling 0."
+ setting_vdev_slot_scaling_0_desc: "new vdev building slots cost no vdev."
+ setting_vdev_slot_scaling_12: "vdev slot scaling 12."
+ setting_vdev_slot_scaling_12_desc: "new vdev building slots cost 12 vdev and cost increases by 12 for each bought."
+ setting_vdev_slot_scaling_25: "vdev slot scaling 25."
+ setting_vdev_slot_scaling_25_desc: "new vdev building slots cost 25 vdev and cost increases by 25 for each bought."
+ setting_vdev_slot_scaling_50: "vdev slot scaling 50."
+ setting_vdev_slot_scaling_50_desc: "new vdev building slots cost 50 vdev and cost increases by 50 for each bought."
