@@ -76,37 +76,3 @@ vdev_tier_scaled_infrastructure = {
         display_mode = scaled
     }
 }
-
-# =========================================
-# PRESTIGE / CULTURE
-# Target: knights + prestige drip @100
-# =========================================
-# vdev_tier_scaled_prestige = {
-#     # knight_effectiveness_mult = 0.005   # +50% @100
-#     # monthly_prestige          = 0.01    # +0.10 @100
-#     icon = prestige_positive
-#     scale = {
-#         value = vdev_modifier_scaling_value_prestige
-#         desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_PRESTIGE_LEVEL
-#         display_mode = scaled
-#     }
-# }
-
-# =========================================
-# legend / SOFT POWER
-# Target: legend spread + popularity @100
-# =========================================
-# vdev_tier_scaled_legend = {
-#     # owned_legend_spread_mult = 0.004   # +40% @100
-#     county_holder_character_modifier = {
-#         owned_legend_spread_mult = 0.04
-#         learning = 1
-#     }
-#     county_opinion_add       = 0.1     # +10 @100
-#     icon = magic_positive
-#     scale = {
-#         value = vdev_modifier_scaling_value_legend
-#         desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_legend_LEVEL
-#         display_mode = scaled
-#     }
-# }

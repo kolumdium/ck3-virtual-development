@@ -173,8 +173,8 @@
 		}
 	}
 
-	compatibility = {
-		brave = @pos_compat_low
-		craven = @neg_compat_low
-	}
+	# compatibility = {
+	# 	brave = @pos_compat_low
+	# 	craven = @neg_compat_low
+	# }
 }
