@@ -1,5 +1,5 @@
 ﻿vdev_enabled_rule = {
-    categories = { game_setup }     # any category you like: game_setup, difficulty, map, rules, etc.
+    categories = { vdev_game_setup }     # any category you like: game_setup, difficulty, map, rules, etc.
     default = vdev_enabled          # which setting is selected by default
 
     vdev_disabled = { }             # settings (no need for "option = { ... }" in this schema)
@@ -8,7 +8,7 @@
 
 # Virtual Development: overflow threshold
 vdev_overflow_threshold_preset = {
-    categories = { game_setup }
+    categories = { vdev_game_setup }
     default = vdev_threshold_100
 
     vdev_threshold_100  = { }
@@ -19,7 +19,7 @@ vdev_overflow_threshold_preset = {
 
 # Virtual Development: overflow chunk
 vdev_overflow_chunk_preset = {
-    categories = { game_setup }
+    categories = { vdev_game_setup }
     default = vdev_chunk_25
 
     vdev_chunk_50  = { }
@@ -30,9 +30,20 @@ vdev_overflow_chunk_preset = {
 
 # Virtual Development: does AI get random buffs
 vdev_ai_buff_preset = {
-    categories = { game_setup }
+    categories = { vdev_game_setup }
     default = vdev_ai_buff_random
 
     vdev_ai_buff_random = { }
     vdev_ai_buff_just_normal = { }
+}
+
+# Virtual Development: Building Slot Scaling
+vdev_new_slot_scaling_cost_preset = {
+    categories = { vdev_game_setup }
+    default = vdev_slot_scaling_25
+
+    vdev_slot_scaling_0 = {}
+    vdev_slot_scaling_12 = {}
+    vdev_slot_scaling_25 = {}
+    vdev_slot_scaling_50 = {}
 }

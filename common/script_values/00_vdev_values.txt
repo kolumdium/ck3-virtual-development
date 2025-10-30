@@ -55,6 +55,31 @@ vdev_ai_random = {
     }
 }
 
+vdev_new_slot_scaling_cost = {
+    value = 25
+    if = {
+        limit = {
+            has_game_rule = vdev_slot_scaling_0
+        }
+        value = 0
+    }
+    else_if = {
+        limit = {
+            has_game_rule = vdev_slot_scaling_12
+        }
+        value = 12
+    }
+    else_if = {
+        limit = {
+            has_game_rule = vdev_slot_scaling_50
+        }
+        value = 50
+    }
+    else = {
+        value = 25
+    }
+}
+
 vdev_modifier_scaling_value_normal = {
     value = var:vdev_county_normal
     min = 1
@@ -85,4 +110,15 @@ vdev_modifier_scaling_value_infrastructure = {
     min = 1
     max = 100
     desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_INFRASTRUCTURE_LEVEL
+}
+
+vdev_convert_vdev_gold_cost = 250
+vdev_focus_change_gold_cost = 25
+vdev_focus_change_gold_cost_all = 2000
+vdev_building_slot_gold_cost = 2000
+vdev_building_gold_cost = 1000
+
+vdev_building_slot_vdev_cost = {
+    value = var:vdev_extra_building_slots
+    multiply = vdev_new_slot_scaling_cost
 }
