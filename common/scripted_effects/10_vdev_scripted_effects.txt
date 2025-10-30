@@ -57,6 +57,20 @@ vdev_init_focus = {
     }
 }
 
+vdev_init_extra_building_slots = {
+    set_variable = {
+        name = vdev_extra_building_slots
+        value = 1
+    }
+}
+
+vdev_extra_building_slot_bought = {
+    change_variable = {
+        name = vdev_extra_building_slots
+        add = 1
+    }
+}
+
 vdev_init_all = {
     vdev_init_buff = { BUFF = normal}
     vdev_init_buff = { BUFF = offensive}
@@ -64,6 +78,7 @@ vdev_init_all = {
     vdev_init_buff = { BUFF = health}
     vdev_init_buff = { BUFF = infrastructure}
     vdev_init_focus = yes
+    vdev_init_extra_building_slots = yes
 }
 
 # =========================================
@@ -114,6 +129,22 @@ vdev_convert_amount_of_buff_to_another = {
             subtract = $AMOUNT$
         }
         vdev_add_to_buff = {
+            BUFF = $ANOTHER$
+            AMOUNT = $AMOUNT$
+        }
+    }
+}
+
+vdev_convert_amount_of_buff_to_another_n = {
+    if = {
+        limit = {
+            var:vdev_county_$BUFF$ >= $AMOUNT$
+        }
+        change_variable = {
+            name = vdev_county_$BUFF$
+            add = $AMOUNT$
+        }
+        vdev_add_to_buff_n = {
             BUFF = $ANOTHER$
             AMOUNT = $AMOUNT$
         }
@@ -249,7 +280,7 @@ vdev_add_trait_xp = {
                 track = vdev_$BUFF$
                 value = {
                     value = $AMOUNT$
-                    multiply = -0.1
+                    multiply = -0.2
                 }
             }
         }
