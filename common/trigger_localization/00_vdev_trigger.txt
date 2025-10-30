@@ -1,0 +1,15 @@
+﻿vdev_add_barony_building_slot_decision_variables_fit = {
+    global = vdev_add_barony_building_slot_decision_variables_fit
+}
+
+vdev_add_barony_building_decision_variables_fit = {
+    global = vdev_add_barony_building_decision_variables_fit
+}
+
+vdev_has_barony_focus = {
+    global = vdev_has_barony_focus
+}
+
+vdev_convert_vdev_decision_variables_fit = {
+    global = vdev_convert_vdev_decision_variables_fit
+}
