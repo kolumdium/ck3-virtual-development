@@ -1,0 +1,12 @@
+﻿namespace = vdev_on_game_start
+
+vdev_on_game_start.1 = {
+    hidden = yes
+    scope = none
+
+    immediate = {
+        every_county = {
+            vdev_init_all = yes
+        }
+    }
+}

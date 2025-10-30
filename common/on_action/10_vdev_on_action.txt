@@ -7,3 +7,12 @@ vdev_yearly_transfer = {
     trigger = { has_game_rule = vdev_enabled }
     events = { vdev_yearly.1 }
 }
+
+on_game_start = {
+    on_actions = { vdev_on_game_start_init }
+}
+
+vdev_on_game_start_init = {
+    events = { vdev_on_game_start.1 }
+}
+
