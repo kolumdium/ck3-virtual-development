@@ -9,19 +9,9 @@ vdev_yearly.1 = {
             limit = {
                 development_level >= vdev_overflow_threshold
             }
-            if = {
-                limit = {
-                    NOT = {
-                        has_variable = vdev_county_normal
-                    }
-                }
-                vdev_init_all = yes
-            }
-
 
             change_development_level = vdev_overflow_chunk
 
-            # if this is triggered not by the player and the gamerule is set to random, randomize the counties focus
             county.holder = {
                 if = {
                     limit = {

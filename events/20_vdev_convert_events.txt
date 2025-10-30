@@ -7,11 +7,13 @@ vdev_convert.1 = {
 
     theme = education
 
+    desc = vdev_convert.1.desc
+
     option = {
         name = vdev_convert_county_vdev_event.1.a
         scope:barony?= {
             county = {
-                vdev_convert_amount_of_buff_to_another = {
+                vdev_convert_amount_of_buff_to_another_n = {
                     BUFF = normal
                     ANOTHER = offensive
                     AMOUNT = vdev_overflow_chunk
@@ -27,7 +29,7 @@ vdev_convert.1 = {
         name = vdev_convert_county_vdev_event.1.b
         scope:barony ?= {
             county = {
-                vdev_convert_amount_of_buff_to_another = {
+                vdev_convert_amount_of_buff_to_another_n = {
                     BUFF = normal
                     ANOTHER = defensive
                     AMOUNT = vdev_overflow_chunk
@@ -41,7 +43,7 @@ vdev_convert.1 = {
         name = vdev_convert_county_vdev_event.1.c
         scope:barony ?= {
             county = {
-                vdev_convert_amount_of_buff_to_another = {
+                vdev_convert_amount_of_buff_to_another_n = {
                     BUFF = normal
                     ANOTHER = health
                     AMOUNT = vdev_overflow_chunk
@@ -55,7 +57,7 @@ vdev_convert.1 = {
         name = vdev_convert_county_vdev_event.1.d
         scope:barony ?= {
             county = {
-                vdev_convert_amount_of_buff_to_another = {
+                vdev_convert_amount_of_buff_to_another_n = {
                     BUFF = normal
                     ANOTHER = infrastructure
                     AMOUNT = vdev_overflow_chunk
@@ -64,5 +66,9 @@ vdev_convert.1 = {
                 vdev_refresh_county_buff = { BUFF = infrastructure }
             }
         }
+    }
+    option = {
+        name = vdev_convert_county_vdev_event.1.e
+        add_gold = vdev_convert_vdev_gold_cost
     }
 }

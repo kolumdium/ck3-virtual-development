@@ -11,65 +11,30 @@ vdev_county.1 = {
     # Set to Normal
     option = {
         name = vdev_change_county_focus_event.1.a
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    has_variable = vdev_county_focus
-                }
-            }
-        }
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 0 }
         }
     }
     option = {
         name = vdev_change_county_focus_event.1.b
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    has_variable = vdev_county_focus
-                }
-            }
-        }
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 1 }
         }
     }
     option = {
         name = vdev_change_county_focus_event.1.c
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    has_variable = vdev_county_focus
-                }
-            }
-        }
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 2 }
         }
     }
     option = {
         name = vdev_change_county_focus_event.1.d
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    has_variable = vdev_county_focus
-                }
-            }
-        }
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 3 }
         }
     }
     option = {
         name = vdev_change_county_focus_event.1.e
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    has_variable = vdev_county_focus
-                }
-            }
-        }
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 4 }
         }
@@ -77,6 +42,7 @@ vdev_county.1 = {
     ## just close to not get stuck
     option = {
         name = vdev_change_county_focus_event.1.f
+        add_gold = vdev_focus_change_gold_cost
     }
 }
 
@@ -117,152 +83,6 @@ vdev_county.2 = {
     }
     option = {
         name = vdev_change_all_county_focus_event.1.f
-    }
-}
-
-vdev_county.3 = {
-    type = character_event
-    hidden = no
-    theme = education
-
-    option = {
-        name = vdev_add_building_event.1.a
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    var:vdev_county_normal >= 25
-                }
-                title_province = {
-                    NOT = {
-                        has_building_or_higher = vdev_special_normal_01
-                    }
-                }
-            }
-        }
-        scope:barony ?= {
-            county = {
-                vdev_remove_from_buff = {
-                    BUFF = normal
-                    AMOUNT = 25
-                }
-                vdev_refresh_county_buff = { BUFF = normal }
-            }
-            title_province = {
-                add_building = vdev_special_normal_01
-            }
-        }
-    }
-    option = {
-        name = vdev_add_building_event.1.b
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    var:vdev_county_offensive >= 25
-                }
-                title_province = {
-                    NOT = {
-                        has_building_or_higher = vdev_special_offensive_01
-                    }
-                }
-            }
-        }
-        scope:barony ?= {
-            county = {
-                vdev_remove_from_buff = {
-                    BUFF = offensive
-                    AMOUNT = 25
-                }
-                every_county_province = {
-                    vdev_refresh_all_province_buffs = yes
-                }
-            }
-            title_province = {
-                add_building = vdev_special_offensive_01
-            }
-        }
-    }
-    option = {
-        name = vdev_add_building_event.1.c
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    var:vdev_county_defensive >= 25
-                }
-                title_province = {
-                    NOT = {
-                        has_building_or_higher = vdev_special_defensive_01
-                    }
-                }
-            }
-        }
-        scope:barony ?= {
-            county = {
-                vdev_remove_from_buff = {
-                    BUFF = defensive
-                    AMOUNT = 25
-                }
-                vdev_refresh_county_buff = { BUFF = defensive }
-            }
-            title_province = {
-                add_building = vdev_special_defensive_01
-            }
-        }
-    }
-    option = {
-        name = vdev_add_building_event.1.d
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    var:vdev_county_health >= 25
-                }
-                title_province = {
-                    NOT = {
-                        has_building_or_higher = vdev_special_health_01
-                    }
-                }
-            }
-        }
-        scope:barony ?= {
-            county = {
-                vdev_remove_from_buff = {
-                    BUFF = health
-                    AMOUNT = 25
-                }
-                vdev_refresh_county_buff = { BUFF = health }
-            }
-            title_province = {
-                add_building = vdev_special_health_01
-            }
-        }
-    }
-    option = {
-        name = vdev_add_building_event.1.e
-        trigger = {
-            scope:barony ?= {
-                county = {
-                    var:vdev_county_infrastructure >= 25
-                }
-                title_province = {
-                    NOT = {
-                        has_building_or_higher = vdev_special_infrastructure_01
-                    }
-                }
-            }
-        }
-        scope:barony ?= {
-            county = {
-                vdev_remove_from_buff = {
-                    BUFF = infrastructure
-                    AMOUNT = 25
-                }
-                vdev_refresh_county_buff = { BUFF = infrastructure }
-            }
-            title_province = {
-                add_building = vdev_special_infrastructure_01
-            }
-        }
-    }
-    option = {
-        name = vdev_add_building_event.1.f
+        add_gold = vdev_focus_change_gold_cost_all
     }
 }
