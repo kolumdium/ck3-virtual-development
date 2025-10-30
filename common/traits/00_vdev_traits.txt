@@ -2,16 +2,6 @@
 	category = lifestyle
 	icon = architect.dds
 
-	# stewardship = 1
-	# domain_tax_mult = 0.01
-	# life_expectancy = 2
-	# development_growth = 0.02
-	# development_growth_factor = 0.02
-	# building_slot_add = 1
-	# owned_legend_spread_add = 1
-	# owned_legend_spread_mult = 0.02
-	# fort_level = 1
-
 	ruler_designer_cost = 99999
 
 	tracks = {
