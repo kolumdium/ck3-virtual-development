@@ -8,6 +8,8 @@ vdev_county.1 = {
 
     theme = education
 
+    desc = vdev_county.1.desc
+
     # Set to Normal
     option = {
         name = vdev_change_county_focus_event.1.a
@@ -50,6 +52,7 @@ vdev_county.2 = {
     type = character_event
     hidden = no
     theme = education
+    desc = vdev_county.2.desc
 
     option = {
         name = vdev_change_all_county_focus_event.1.a

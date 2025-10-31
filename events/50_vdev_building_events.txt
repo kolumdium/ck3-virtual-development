@@ -4,6 +4,8 @@ vdev_building_event.1 = {
     type = character_event
     hidden = no
     theme = education
+    desc = vdev_building_event.1.desc
+
 
     option = {
         name = vdev_add_building_event.1.a
@@ -158,6 +160,7 @@ vdev_building_event.2 = {
     type = character_event
     hidden = no
     theme = education
+    desc = vdev_building_event.2.desc
 
     option = {
         name = vdev_add_building_slot_event.2.a
