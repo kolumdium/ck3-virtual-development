@@ -1,0 +1,17 @@
+﻿window = {
+    name = "vdev_init_widget"
+    parentanchor = top|right
+    size = { 1 1 }
+    layer = windows_layer
+    filter_mouse = all
+    allow_outside = yes
+    alwaystransparent = yes
+
+    visible = yes
+
+    state = {
+        name = "vdev_init_state"
+        trigger_when = "[And(GetPlayer.IsValid, GetScriptedGui('vdev_init_check').IsValid(GuiScope.End))]"
+        on_finish = "[GetScriptedGui('vdev_init_sgui').Execute(GuiScope.End)]"
+    }
+}

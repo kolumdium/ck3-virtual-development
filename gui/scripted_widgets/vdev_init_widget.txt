@@ -1,0 +1,1 @@
+﻿gui/window_vdev_init.gui = vdev_init_widget

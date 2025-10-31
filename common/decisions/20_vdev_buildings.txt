@@ -48,7 +48,9 @@ vdev_add_barony_building_decision = {
                 }
             }
             title_province = {
-                free_building_slots > 0
+                NOT = {
+                    free_building_slots = 0
+                }
             }
         }
     }

@@ -1,0 +1,20 @@
+﻿vdev_init_sgui = {
+    scope = character
+    effect = {
+        every_county = {vdev_init_all = yes}
+        debug_log = "vdev init sucess."
+    }
+
+}
+
+vdev_init_check = {
+    scope = character
+
+    is_valid = {
+        any_county = {
+            NOT = {
+                has_variable = vdev_county_normal
+            }
+        }
+    }
+}
