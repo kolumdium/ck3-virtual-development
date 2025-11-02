@@ -5,7 +5,6 @@
 ![Virtual Development Thumbnail](thumbnail.png)
 
 ## Chinese Translation 中文翻譯  
-*(Not up to date yet)*  
 Translation included in [集成汉化·|收复失地|](https://steamcommunity.com/sharedfiles/filedetails/?id=3403925213)  
 [翻譯請點擊此處](https://steamcommunity.com/sharedfiles/filedetails/?id=3403925213)
 
