@@ -1,5 +1,5 @@
 ﻿# # Events run from the on_yearly_pulse on_action
-# namespace = vdev_yearly_test
+namespace = vdev_yearly_test
 
 # vdev_yearly_test.1 = {
 #     type = character_event
@@ -181,6 +181,60 @@
 #     immediate = {
 #         every_county = {
 #             vdev_init_all = yes
+#         }
+#     }
+# }
+
+# vdev_yearly_test.7 = {
+#     hidden = yes
+#     scope = character
+
+#     immediate = {
+#         every_held_county = {
+#             if = {
+#                 limit = {
+#                     has_variable = vdev_county_normal
+#                 }
+#                 vdev_add_to_buff_n = {
+#                     BUFF = normal
+#                     AMOUNT = -1
+#                 }
+#                 vdev_refresh_county_buff =  {
+#                     BUFF = normal
+#                 }
+#             }
+#             else = {
+#                 vdev_add_to_buff = {
+#                     BUFF = defensive
+#                     AMOUNT = 1
+#                 }
+#                 vdev_refresh_county_buff = {
+#                     BUFF = offensive
+#                 }
+#             }
+#         }
+#     }
+# }
+
+# vdev_yearly_test.8 = {
+#     hidden = yes
+#     scope = character
+
+#     immediate = {
+#         debug_log = "Test Event 8"
+#         every_county = {
+#             if = {
+#                 limit = {
+#                     NOT = {
+#                         has_variable = vdev_county_normal
+#                     }
+#                 }
+#                 # vdev_init_all = yes
+#                 debug_log = "vdev init on county [THIS.Title.GetNameNoTooltip] tried."
+#             }
+#             else = {
+#                 debug_log = "skipped [THIS.Title.GetNameNoTooltip]."
+#             }
 #         }
 #     }
 # }

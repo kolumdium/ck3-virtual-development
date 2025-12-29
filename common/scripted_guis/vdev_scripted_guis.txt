@@ -1,8 +1,22 @@
 ﻿vdev_init_sgui = {
     scope = character
     effect = {
-        every_county = {vdev_init_all = yes}
-        debug_log = "vdev init sucess."
+        every_county = {
+            if = {
+                limit = {
+                    NOT = {
+                        has_variable = vdev_county_normal
+                    }
+                }
+                vdev_init_all = yes
+                debug_log = "vdev init on county [THIS.Title.GetNameNoTooltip] success."
+            }
+            # else = {
+            #     debug_log = "skipped [THIS.Title.GetNameNoTooltip]."
+            # }
+        }
+        # trigger_event = vdev_yearly_test.7
+        debug_log = "vdev init sucess. Checked every county."
     }
 
 }
