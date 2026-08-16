@@ -35,6 +35,11 @@ vdev_change_barony_focus_decision = {
 	}
 
     is_valid = {
+        scope:barony ?= {
+            barony_is_valid_for_vdev_focus_trigger = {
+                CHARACTER = root
+            }
+        }
         custom_description = {
             text = "vdev_has_barony_focus"
             any_held_title = {

@@ -35,6 +35,11 @@ vdev_add_barony_building_decision = {
 	}
 
     is_valid = {
+        scope:barony ?= {
+            barony_is_valid_for_vdev_building_trigger = {
+                CHARACTER = root
+            }
+        }
         custom_description = {
             text = "vdev_add_barony_building_decision_variables_fit"
             any_held_title = {
@@ -104,6 +109,11 @@ vdev_add_barony_building_slot_decision = {
     }
 
     is_valid = {
+        scope:barony ?= {
+            barony_is_valid_for_vdev_building_slot_trigger = {
+                CHARACTER = root
+            }
+        }
         custom_description = {
             text = "vdev_add_barony_building_slot_decision_variables_fit"
             any_held_title = {

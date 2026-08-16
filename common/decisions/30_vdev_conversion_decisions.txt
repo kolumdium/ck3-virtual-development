@@ -36,6 +36,11 @@ vdev_convert_vdev_decision = {
 	}
 
     is_valid = {
+        scope:barony ?= {
+            barony_is_valid_for_vdev_convert_trigger = {
+                CHARACTER = root
+            }
+        }
         custom_description = {
             text = "vdev_convert_vdev_decision_variables_fit"
             any_held_title = {
