@@ -49,9 +49,5 @@ vdev_convert_vdev_decision = {
         trigger_event = vdev_convert.1
     }
 
-    cost = {
-        gold = vdev_convert_vdev_gold_cost
-    }
-
     ai_check_interval = 0
 }

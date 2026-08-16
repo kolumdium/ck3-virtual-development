@@ -10,6 +10,7 @@ vdev_building_event.1 = {
     option = {
         name = vdev_add_building_event.1.a
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= 25
@@ -21,6 +22,10 @@ vdev_building_event.1 = {
                     }
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_gold_cost
+            multiply = -1
         }
         scope:barony ?= {
             county = {
@@ -38,6 +43,7 @@ vdev_building_event.1 = {
     option = {
         name = vdev_add_building_event.1.b
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_offensive >= 25
@@ -49,6 +55,10 @@ vdev_building_event.1 = {
                     }
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_gold_cost
+            multiply = -1
         }
         scope:barony ?= {
             county = {
@@ -68,6 +78,7 @@ vdev_building_event.1 = {
     option = {
         name = vdev_add_building_event.1.c
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_defensive >= 25
@@ -79,6 +90,10 @@ vdev_building_event.1 = {
                     }
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_gold_cost
+            multiply = -1
         }
         scope:barony ?= {
             county = {
@@ -96,6 +111,7 @@ vdev_building_event.1 = {
     option = {
         name = vdev_add_building_event.1.d
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_health >= 25
@@ -107,6 +123,10 @@ vdev_building_event.1 = {
                     }
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_gold_cost
+            multiply = -1
         }
         scope:barony ?= {
             county = {
@@ -124,6 +144,7 @@ vdev_building_event.1 = {
     option = {
         name = vdev_add_building_event.1.e
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_infrastructure >= 25
@@ -135,6 +156,10 @@ vdev_building_event.1 = {
                     }
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_gold_cost
+            multiply = -1
         }
         scope:barony ?= {
             county = {
@@ -151,7 +176,6 @@ vdev_building_event.1 = {
     }
     option = {
         name = vdev_add_building_event.1.f
-        add_gold = vdev_building_gold_cost
         is_cancel_option = yes
     }
 }
@@ -166,12 +190,17 @@ vdev_building_event.2 = {
     option = {
         name = vdev_add_building_slot_event.2.a
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
                     var:vdev_extra_building_slots = 1
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_slot_gold_cost
+            multiply = -1
         }
         scope:barony = {
             county = {
@@ -190,12 +219,17 @@ vdev_building_event.2 = {
     option = {
         name = vdev_add_building_slot_event.2.b
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
                     var:vdev_extra_building_slots = 2
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_slot_gold_cost
+            multiply = -1
         }
         scope:barony = {
             county = {
@@ -214,12 +248,17 @@ vdev_building_event.2 = {
     option = {
         name = vdev_add_building_slot_event.2.c
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
                     var:vdev_extra_building_slots = 3
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_slot_gold_cost
+            multiply = -1
         }
         scope:barony = {
             county = {
@@ -238,12 +277,17 @@ vdev_building_event.2 = {
     option = {
         name = vdev_add_building_slot_event.2.d
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
                     var:vdev_extra_building_slots = 4
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_slot_gold_cost
+            multiply = -1
         }
         scope:barony = {
             county = {
@@ -262,12 +306,17 @@ vdev_building_event.2 = {
     option = {
         name = vdev_add_building_slot_event.2.e
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
                     var:vdev_extra_building_slots = 5
                 }
             }
+        }
+        add_gold = {
+            value = vdev_building_slot_gold_cost
+            multiply = -1
         }
         scope:barony = {
             county = {
@@ -285,7 +334,6 @@ vdev_building_event.2 = {
     }
     option = {
         name = vdev_add_building_slot_event.2.f
-        add_gold = vdev_building_slot_gold_cost
         is_cancel_option = yes
     }
 }

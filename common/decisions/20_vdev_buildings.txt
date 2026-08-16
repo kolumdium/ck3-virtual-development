@@ -66,10 +66,6 @@ vdev_add_barony_building_decision = {
         trigger_event = vdev_building_event.1
     }
 
-    cost = {
-        gold = vdev_building_gold_cost
-    }
-
     ai_check_interval = 0
     # ai_potential = 0
     # ai_will_do = 0
@@ -131,10 +127,6 @@ vdev_add_barony_building_slot_decision = {
                 }
             }
         }
-    }
-
-    cost = {
-        gold = vdev_building_slot_gold_cost
     }
 
     effect = {

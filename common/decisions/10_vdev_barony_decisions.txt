@@ -56,10 +56,6 @@ vdev_change_barony_focus_decision = {
         trigger_event = vdev_county.1
     }
 
-    cost = {
-        gold = vdev_focus_change_gold_cost
-    }
-
     ai_check_interval = 0
 }
 
@@ -84,10 +80,6 @@ vdev_change_all_barony_focus_decision = {
     
     effect = {
         trigger_event = vdev_county.2
-    }
-
-    cost = {
-        gold = vdev_focus_change_gold_cost_all
     }
 
     ai_check_interval = 0

@@ -7,6 +7,17 @@ barony_is_valid_for_vdev_convert_trigger = {
     }
 }
 
+# Root is the converting character; scope:barony is selected by the decision widget.
+vdev_can_convert_selected_barony_trigger = {
+    gold >= vdev_convert_vdev_gold_cost
+    scope:barony ?= {
+        holder = root
+        county = {
+            var:vdev_county_normal >= 25
+        }
+    }
+}
+
 barony_has_valid_vdev_amount_trigger = {
     holder = $CHARACTER$
     barony.county = {
