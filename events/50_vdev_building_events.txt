@@ -39,6 +39,13 @@ vdev_building_event.1 = {
                 add_building = vdev_special_normal_01
             }
         }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_event.1.b
@@ -74,6 +81,13 @@ vdev_building_event.1 = {
                 add_building = vdev_special_offensive_01
             }
         }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_event.1.c
@@ -105,6 +119,13 @@ vdev_building_event.1 = {
             }
             title_province = {
                 add_building = vdev_special_defensive_01
+            }
+        }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
             }
         }
     }
@@ -140,6 +161,13 @@ vdev_building_event.1 = {
                 add_building = vdev_special_health_01
             }
         }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_event.1.e
@@ -171,6 +199,13 @@ vdev_building_event.1 = {
             }
             title_province = {
                 add_building = vdev_special_infrastructure_01
+            }
+        }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
             }
         }
     }
@@ -215,6 +250,13 @@ vdev_building_event.2 = {
                 add_province_modifier = extra_building_slot
             }
         }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_slot_event.2.b
@@ -242,6 +284,13 @@ vdev_building_event.2 = {
             }
             title_province = {
                 add_province_modifier = extra_building_slot
+            }
+        }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
             }
         }
     }
@@ -273,6 +322,13 @@ vdev_building_event.2 = {
                 add_province_modifier = extra_building_slot
             }
         }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_slot_event.2.d
@@ -302,6 +358,13 @@ vdev_building_event.2 = {
                 add_province_modifier = extra_building_slot
             }
         }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_slot_event.2.e
@@ -329,6 +392,13 @@ vdev_building_event.2 = {
             }
             title_province = {
                 add_province_modifier = extra_building_slot
+            }
+        }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
             }
         }
     }

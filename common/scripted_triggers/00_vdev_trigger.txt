@@ -63,16 +63,34 @@ barony_is_valid_for_vdev_building_trigger = {
     }
 }
 
+vdev_can_build_in_selected_barony_trigger = {
+    gold >= vdev_building_gold_cost
+    scope:barony ?= {
+        barony_is_valid_for_vdev_building_trigger = {
+            CHARACTER = root
+        }
+    }
+}
+
 barony_is_valid_for_vdev_building_slot_trigger = {
     holder = $CHARACTER$
     county = {
         has_variable = vdev_county_normal
         var:vdev_county_normal >= vdev_building_slot_vdev_cost
-        var:vdev_extra_building_slots < 5
+        var:vdev_extra_building_slots <= 5
     }
     NOT = {
         title_province = {
             building_slots > define:NProvince|MAX_BUILDINGS
+        }
+    }
+}
+
+vdev_can_add_slot_to_selected_barony_trigger = {
+    gold >= vdev_building_slot_gold_cost
+    scope:barony ?= {
+        barony_is_valid_for_vdev_building_slot_trigger = {
+            CHARACTER = root
         }
     }
 }
