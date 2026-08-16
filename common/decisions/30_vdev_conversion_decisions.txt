@@ -22,7 +22,9 @@ vdev_convert_vdev_decision = {
 		barony_valid = {
 			trigger_if = {
 				limit = { exists = this }
-                holder = scope:ruler
+                barony_is_valid_for_vdev_convert_trigger = {
+                    CHARACTER = scope:ruler
+                }
 			}
 			trigger_else = {
 				custom_description = {
@@ -34,12 +36,12 @@ vdev_convert_vdev_decision = {
 	}
 
     is_valid = {
-        scope:barony ?= {
-            holder = root
-            custom_description = {
-                text = "vdev_convert_vdev_decision_variables_fit"
-                county = {
-                    var:vdev_county_normal >= 25
+        custom_description = {
+            text = "vdev_convert_vdev_decision_variables_fit"
+            any_held_title = {
+                tier = tier_barony
+                barony_is_valid_for_vdev_convert_trigger = {
+                    CHARACTER = root
                 }
             }
         }

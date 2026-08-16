@@ -3,7 +3,7 @@ barony_is_valid_for_vdev_convert_trigger = {
     holder = $CHARACTER$
     barony.county = {
         has_variable = vdev_county_normal
-        var:vdev_county_normal > 10
+        var:vdev_county_normal >= 25
     }
 }
 
@@ -11,9 +11,68 @@ barony_is_valid_for_vdev_convert_trigger = {
 vdev_can_convert_selected_barony_trigger = {
     gold >= vdev_convert_vdev_gold_cost
     scope:barony ?= {
-        holder = root
-        county = {
-            var:vdev_county_normal >= 25
+        barony_is_valid_for_vdev_convert_trigger = {
+            CHARACTER = root
+        }
+    }
+}
+
+barony_is_valid_for_vdev_focus_trigger = {
+    holder = $CHARACTER$
+    county = {
+        has_variable = vdev_county_focus
+    }
+}
+
+barony_is_valid_for_vdev_building_trigger = {
+    holder = $CHARACTER$
+    title_province = {
+        free_building_slots > 0
+    }
+    OR = {
+        AND = {
+            county = { var:vdev_county_normal >= 25 }
+            title_province = {
+                NOT = { has_building_or_higher = vdev_special_normal_01 }
+            }
+        }
+        AND = {
+            county = { var:vdev_county_offensive >= 25 }
+            title_province = {
+                NOT = { has_building_or_higher = vdev_special_offensive_01 }
+            }
+        }
+        AND = {
+            county = { var:vdev_county_defensive >= 25 }
+            title_province = {
+                NOT = { has_building_or_higher = vdev_special_defensive_01 }
+            }
+        }
+        AND = {
+            county = { var:vdev_county_health >= 25 }
+            title_province = {
+                NOT = { has_building_or_higher = vdev_special_health_01 }
+            }
+        }
+        AND = {
+            county = { var:vdev_county_infrastructure >= 25 }
+            title_province = {
+                NOT = { has_building_or_higher = vdev_special_infrastructure_01 }
+            }
+        }
+    }
+}
+
+barony_is_valid_for_vdev_building_slot_trigger = {
+    holder = $CHARACTER$
+    county = {
+        has_variable = vdev_county_normal
+        var:vdev_county_normal >= vdev_building_slot_vdev_cost
+        var:vdev_extra_building_slots < 5
+    }
+    NOT = {
+        title_province = {
+            building_slots > define:NProvince|MAX_BUILDINGS
         }
     }
 }
