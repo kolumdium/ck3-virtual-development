@@ -16,10 +16,7 @@ vdev_convert.1 = {
             vdev_can_convert_selected_barony_trigger = yes
         }
 
-        add_gold = {
-            value = vdev_convert_vdev_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_convert_vdev_gold_cost
         scope:barony?= {
             county = {
                 vdev_convert_amount_of_buff_to_another_n = {
@@ -47,10 +44,7 @@ vdev_convert.1 = {
             vdev_can_convert_selected_barony_trigger = yes
         }
 
-        add_gold = {
-            value = vdev_convert_vdev_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_convert_vdev_gold_cost
         scope:barony ?= {
             county = {
                 vdev_convert_amount_of_buff_to_another_n = {
@@ -76,10 +70,7 @@ vdev_convert.1 = {
             vdev_can_convert_selected_barony_trigger = yes
         }
 
-        add_gold = {
-            value = vdev_convert_vdev_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_convert_vdev_gold_cost
         scope:barony ?= {
             county = {
                 vdev_convert_amount_of_buff_to_another_n = {
@@ -105,10 +96,7 @@ vdev_convert.1 = {
             vdev_can_convert_selected_barony_trigger = yes
         }
 
-        add_gold = {
-            value = vdev_convert_vdev_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_convert_vdev_gold_cost
         scope:barony ?= {
             county = {
                 vdev_convert_amount_of_buff_to_another_n = {

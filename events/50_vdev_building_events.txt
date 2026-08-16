@@ -23,10 +23,7 @@ vdev_building_event.1 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -63,10 +60,7 @@ vdev_building_event.1 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -105,10 +99,7 @@ vdev_building_event.1 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -145,10 +136,7 @@ vdev_building_event.1 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -185,10 +173,7 @@ vdev_building_event.1 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -233,10 +218,7 @@ vdev_building_event.2 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_slot_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
@@ -269,10 +251,7 @@ vdev_building_event.2 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_slot_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
@@ -305,10 +284,7 @@ vdev_building_event.2 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_slot_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
@@ -341,10 +317,7 @@ vdev_building_event.2 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_slot_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
@@ -377,10 +350,7 @@ vdev_building_event.2 = {
                 }
             }
         }
-        add_gold = {
-            value = vdev_building_slot_gold_cost
-            multiply = -1
-        }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
