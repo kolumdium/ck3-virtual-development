@@ -152,6 +152,7 @@ vdev_building_event.1 = {
     option = {
         name = vdev_add_building_event.1.f
         add_gold = vdev_building_gold_cost
+        is_cancel_option = yes
     }
 }
 
@@ -285,5 +286,6 @@ vdev_building_event.2 = {
     option = {
         name = vdev_add_building_slot_event.2.f
         add_gold = vdev_building_slot_gold_cost
+        is_cancel_option = yes
     }
 }

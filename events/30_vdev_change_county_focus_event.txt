@@ -45,6 +45,7 @@ vdev_county.1 = {
     option = {
         name = vdev_change_county_focus_event.1.f
         add_gold = vdev_focus_change_gold_cost
+        is_cancel_option = yes
     }
 }
 
@@ -87,5 +88,6 @@ vdev_county.2 = {
     option = {
         name = vdev_change_all_county_focus_event.1.f
         add_gold = vdev_focus_change_gold_cost_all
+        is_cancel_option = yes
     }
 }

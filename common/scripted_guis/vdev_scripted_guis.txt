@@ -15,7 +15,6 @@
             #     debug_log = "skipped [THIS.Title.GetNameNoTooltip]."
             # }
         }
-        # trigger_event = vdev_yearly_test.7
         debug_log = "vdev init sucess. Checked every county."
     }
 

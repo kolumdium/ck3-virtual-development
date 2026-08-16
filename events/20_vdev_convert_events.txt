@@ -70,5 +70,6 @@ vdev_convert.1 = {
     option = {
         name = vdev_convert_county_vdev_event.1.e
         add_gold = vdev_convert_vdev_gold_cost
+        is_cancel_option = yes
     }
 }
