@@ -1,4 +1,4 @@
-# Manager Event
+﻿# Manager Event
 # Shows Options then starts sub events
 # switches to next or previous barony.
 namespace = vdev_manage_realm_event

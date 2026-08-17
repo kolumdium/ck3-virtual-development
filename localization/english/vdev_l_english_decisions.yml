@@ -18,7 +18,7 @@
  vdev_convert_vdev_decision_confirm: "Convert Virtual Development"
  vdev_convert_vdev_decision_tooltip: "Convert normal Virtual Development to another type of Virtual Development."
  vdev_convert_vdev_decision_title: "Convert Virtual Development"
- vdev_convert_vdev_decision_desc: "Convert 25 normal Virtual Development to another type of Virtual Development."
+ vdev_convert_vdev_decision_desc: "Convert [GetPlayer.MakeScope.ScriptValue('vdev_conversion_amount')|0] normal Virtual Development to another type of Virtual Development."
  vdev_check_barony_vdev_levels_confirm: "Manage Barony"
  vdev_check_barony_vdev_levels_tooltip: "Manage the selected barony's Virtual Development, focus, buildings, and building slots."
  vdev_check_barony_vdev_levels_title: "Manage Barony Virtual Development"

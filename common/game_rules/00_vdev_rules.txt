@@ -37,6 +37,16 @@ vdev_ai_buff_preset = {
     vdev_ai_buff_just_normal = { }
 }
 
+# Virtual Development: offensive cap
+vdev_offensive_cap_preset = {
+    categories = { vdev_game_setup }
+    default = vdev_offensive_cap_100
+
+    vdev_offensive_cap_100 = { }
+    vdev_offensive_cap_200 = { }
+    vdev_offensive_cap_unlimited = { }
+}
+
 # Virtual Development: Building Slot Scaling
 vdev_new_slot_scaling_cost_preset = {
     categories = { vdev_game_setup }

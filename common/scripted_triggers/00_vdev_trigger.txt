@@ -3,7 +3,7 @@ barony_is_valid_for_vdev_convert_trigger = {
     holder = $CHARACTER$
     barony.county = {
         has_variable = vdev_county_normal
-        var:vdev_county_normal >= 25
+        var:vdev_county_normal >= vdev_conversion_amount
     }
 }
 
@@ -18,6 +18,17 @@ vdev_can_convert_selected_barony_trigger = {
             }
         }
     }
+}
+
+vdev_can_convert_to_offensive_trigger = {
+    OR = {
+        has_game_rule = vdev_offensive_cap_unlimited
+        var:vdev_county_offensive <= vdev_offensive_conversion_ceiling
+    }
+}
+
+vdev_can_convert_to_infrastructure_trigger = {
+    var:vdev_county_infrastructure <= vdev_infrastructure_conversion_ceiling
 }
 
 barony_is_valid_for_vdev_focus_trigger = {

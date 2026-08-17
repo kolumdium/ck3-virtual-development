@@ -22,6 +22,11 @@ vdev_convert.1 = {
 
         trigger = {
             vdev_can_convert_selected_barony_trigger = yes
+            scope:barony ?= {
+                barony.county = {
+                    vdev_can_convert_to_offensive_trigger = yes
+                }
+            }
         }
 
         remove_short_term_gold = vdev_convert_vdev_gold_cost
@@ -87,6 +92,11 @@ vdev_convert.1 = {
 
         trigger = {
             vdev_can_convert_selected_barony_trigger = yes
+            scope:barony ?= {
+                barony.county = {
+                    vdev_can_convert_to_infrastructure_trigger = yes
+                }
+            }
         }
 
         remove_short_term_gold = vdev_convert_vdev_gold_cost
