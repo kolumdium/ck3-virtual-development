@@ -33,5 +33,6 @@
  vdev_add_building_slot_event.2.d: "Add the fourth slot."
  vdev_add_building_slot_event.2.e: "Add the fifth slot."
  vdev_add_building_slot_event.2.f: "On second thought..."
- vdev_county.3.desc: "Current Virtual Development:\nNormal: #V [vdev_selected_county.MakeScope.Var('vdev_county_normal').GetValue|0]#!\nOffensive: #V [vdev_selected_county.MakeScope.Var('vdev_county_offensive').GetValue|0]#!\nDefensive: #V [vdev_selected_county.MakeScope.Var('vdev_county_defensive').GetValue|0]#!\nHealth: #V [vdev_selected_county.MakeScope.Var('vdev_county_health').GetValue|0]#!\nInfrastructure: #V [vdev_selected_county.MakeScope.Var('vdev_county_infrastructure').GetValue|0]#!"
+ vdev_county.3.desc: "Current Virtual Development in [vdev_current_barony.GetName]:\nNormal: #V [vdev_selected_county.MakeScope.Var('vdev_county_normal').GetValue|0]#!\nOffensive: #V [vdev_selected_county.MakeScope.Var('vdev_county_offensive').GetValue|0]#!\nDefensive: #V [vdev_selected_county.MakeScope.Var('vdev_county_defensive').GetValue|0]#!\nHealth: #V [vdev_selected_county.MakeScope.Var('vdev_county_health').GetValue|0]#!\nInfrastructure: #V [vdev_selected_county.MakeScope.Var('vdev_county_infrastructure').GetValue|0]#!"
  vdev_show_county_vdev_event.1.a: "Splendid."
+ vdev_show_county_vdev_event.1.b: "Show next eligible barony: [vdev_next_barony.GetName]"

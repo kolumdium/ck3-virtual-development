@@ -155,6 +155,7 @@ vdev_check_barony_vdev_levels = {
     }
     
     effect = {
+        clear_variable_list = vdev_viewed_baronies
         trigger_event = vdev_county.3
     }
 

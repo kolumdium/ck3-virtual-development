@@ -119,14 +119,54 @@ vdev_county.3 = {
 
     immediate = {
         scope:barony ?= {
+            save_scope_as = vdev_current_barony
+            root = {
+                add_to_variable_list = {
+                    name = vdev_viewed_baronies
+                    target = scope:barony
+                }
+            }
             county = {
                 save_scope_as = vdev_selected_county
             }
         }
+        clear_saved_scope = vdev_next_barony
+        ordered_held_title = {
+            limit = {
+                tier = tier_barony
+                barony_is_valid_for_vdev_focus_trigger = {
+                    CHARACTER = root
+                }
+                save_temporary_scope_as = vdev_candidate_barony
+                root = {
+                    NOT = {
+                        is_target_in_variable_list = {
+                            name = vdev_viewed_baronies
+                            target = scope:vdev_candidate_barony
+                        }
+                    }
+                }
+            }
+            order_by = development_level
+            position = 0
+            save_scope_as = vdev_next_barony
+        }
+    }
+
+    option = {
+        name = vdev_show_county_vdev_event.1.b
+        trigger = {
+            exists = scope:vdev_next_barony
+        }
+        scope:vdev_next_barony = {
+            save_scope_as = barony
+        }
+        trigger_event = vdev_county.3
     }
 
     option = {
         name = vdev_show_county_vdev_event.1.a
+        clear_variable_list = vdev_viewed_baronies
         is_cancel_option = yes
     }
 
