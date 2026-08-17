@@ -63,6 +63,46 @@ namespace = vdev_yearly_test
 #     }
 # }
 
+# Debug: set every VDev category in a barony's county to 50.
+vdev_yearly_test.9 = {
+    hidden = yes
+    scope = landed_title
+
+    trigger = {
+        tier = tier_barony
+    }
+
+    immediate = {
+        county = {
+            set_variable = {
+                name = vdev_county_normal
+                value = 50
+            }
+            set_variable = {
+                name = vdev_county_offensive
+                value = 50
+            }
+            set_variable = {
+                name = vdev_county_defensive
+                value = 50
+            }
+            set_variable = {
+                name = vdev_county_health
+                value = 50
+            }
+            set_variable = {
+                name = vdev_county_infrastructure
+                value = 50
+            }
+
+            vdev_refresh_all_county_buffs = yes
+            every_county_province = {
+                vdev_refresh_all_province_buffs = yes
+            }
+        }
+    }
+}
+
 # vdev_yearly_test.2 = {
 #     type = character_event
 #     hidden = yes
