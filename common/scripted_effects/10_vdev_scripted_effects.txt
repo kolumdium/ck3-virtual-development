@@ -199,6 +199,7 @@ vdev_add_amount_of_buff_by_focus = {
         vdev_refresh_county_buff = { BUFF = normal }
 
         vdev_add_trait_xp = {
+            CHARACTER = county.holder
             BUFF = normal
             AMOUNT = $AMOUNT$
         }
@@ -215,6 +216,7 @@ vdev_add_amount_of_buff_by_focus = {
             vdev_refresh_province_buff = { BUFF = offensive }
         }
         vdev_add_trait_xp = {
+            CHARACTER = county.holder
             BUFF = offensive
             AMOUNT = $AMOUNT$
         }
@@ -231,6 +233,7 @@ vdev_add_amount_of_buff_by_focus = {
         vdev_refresh_county_buff = { BUFF = defensive }
 
         vdev_add_trait_xp = {
+            CHARACTER = county.holder
             BUFF = defensive
             AMOUNT = $AMOUNT$
         }
@@ -246,6 +249,7 @@ vdev_add_amount_of_buff_by_focus = {
         vdev_refresh_county_buff = { BUFF = health }
 
         vdev_add_trait_xp = {
+            CHARACTER = county.holder
             BUFF = health
             AMOUNT = $AMOUNT$
         }
@@ -261,6 +265,7 @@ vdev_add_amount_of_buff_by_focus = {
         vdev_refresh_county_buff = { BUFF = infrastructure }
 
         vdev_add_trait_xp = {
+            CHARACTER = county.holder
             BUFF = infrastructure
             AMOUNT = $AMOUNT$
         }
@@ -271,7 +276,7 @@ vdev_add_amount_of_buff_by_focus = {
 }
 
 vdev_add_trait_xp = {
-    county.holder = {
+    $CHARACTER$ = {
         if = {
             limit = {
                 has_trait = vdev_developer_trait

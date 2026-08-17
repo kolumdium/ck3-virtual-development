@@ -41,6 +41,11 @@ vdev_convert.1 = {
                 every_county_province = {
                     vdev_refresh_all_province_buffs = yes
                 }
+                vdev_add_trait_xp = {
+                    CHARACTER = root
+                    BUFF = offensive
+                    AMOUNT = vdev_overflow_chunk
+                }
             }
         }
         trigger_event = { id = vdev_convert.1 days = 0 }
@@ -62,8 +67,14 @@ vdev_convert.1 = {
                 }
                 vdev_refresh_county_buff = { BUFF = normal }
                 vdev_refresh_county_buff = { BUFF = defensive }
+                vdev_add_trait_xp = {
+                    CHARACTER = root
+                    BUFF = defensive
+                    AMOUNT = vdev_overflow_chunk
+                }
             }
         }
+
         trigger_event = { id = vdev_convert.1 days = 0 }
     }
     option = {
@@ -83,6 +94,11 @@ vdev_convert.1 = {
                 }
                 vdev_refresh_county_buff = { BUFF = normal }
                 vdev_refresh_county_buff = { BUFF = health }
+                vdev_add_trait_xp = {
+                    CHARACTER = root
+                    BUFF = health
+                    AMOUNT = vdev_overflow_chunk
+                }
             }
         }
         trigger_event = { id = vdev_convert.1 days = 0 }
@@ -109,6 +125,11 @@ vdev_convert.1 = {
                 }
                 vdev_refresh_county_buff = { BUFF = normal }
                 vdev_refresh_county_buff = { BUFF = infrastructure }
+                vdev_add_trait_xp = {
+                    CHARACTER = root
+                    BUFF = infrastructure
+                    AMOUNT = vdev_overflow_chunk
+                }
             }
         }
         trigger_event = { id = vdev_convert.1 days = 0 }
