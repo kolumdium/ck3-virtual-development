@@ -21,7 +21,9 @@ vdev_add_barony_building_decision = {
 		barony_valid = {
 			trigger_if = {
 				limit = { exists = this }
-                holder = scope:ruler
+                barony_is_valid_for_vdev_building_trigger = {
+                    CHARACTER = scope:ruler
+                }
 			}
 			trigger_else = {
 				custom_description = {
@@ -34,22 +36,16 @@ vdev_add_barony_building_decision = {
 
     is_valid = {
         scope:barony ?= {
-            holder = root
-            custom_description = {
-                text = "vdev_add_barony_building_decision_variables_fit"
-                county = {
-                    OR = {
-                        var:vdev_county_normal >= 25
-                        var:vdev_county_offensive >= 25
-                        var:vdev_county_defensive >= 25
-                        var:vdev_county_health >= 25
-                        var:vdev_county_infrastructure >= 25
-                    }
-                }
+            barony_is_valid_for_vdev_building_trigger = {
+                CHARACTER = root
             }
-            title_province = {
-                NOT = {
-                    free_building_slots = 0
+        }
+        custom_description = {
+            text = "vdev_add_barony_building_decision_variables_fit"
+            any_held_title = {
+                tier = tier_barony
+                barony_is_valid_for_vdev_building_trigger = {
+                    CHARACTER = root
                 }
             }
         }
@@ -64,10 +60,6 @@ vdev_add_barony_building_decision = {
 
     effect = {
         trigger_event = vdev_building_event.1
-    }
-
-    cost = {
-        gold = vdev_building_gold_cost
     }
 
     ai_check_interval = 0
@@ -96,7 +88,9 @@ vdev_add_barony_building_slot_decision = {
 		barony_valid = {
 			trigger_if = {
 				limit = { exists = this }
-                holder = scope:ruler
+                barony_is_valid_for_vdev_building_slot_trigger = {
+                    CHARACTER = scope:ruler
+                }
 			}
 			trigger_else = {
 				custom_description = {
@@ -116,25 +110,19 @@ vdev_add_barony_building_slot_decision = {
 
     is_valid = {
         scope:barony ?= {
-            holder = root
-            custom_description = {
-                text = "vdev_add_barony_building_slot_decision_variables_fit"
-                county = {
-                    has_variable = vdev_county_normal
-                    var:vdev_county_normal >= vdev_building_slot_vdev_cost
-                    var:vdev_extra_building_slots < 5
-                }
+            barony_is_valid_for_vdev_building_slot_trigger = {
+                CHARACTER = root
             }
-            NOT = {
-                title_province = {
-                    building_slots > define:NProvince|MAX_BUILDINGS
+        }
+        custom_description = {
+            text = "vdev_add_barony_building_slot_decision_variables_fit"
+            any_held_title = {
+                tier = tier_barony
+                barony_is_valid_for_vdev_building_slot_trigger = {
+                    CHARACTER = root
                 }
             }
         }
-    }
-
-    cost = {
-        gold = vdev_building_slot_gold_cost
     }
 
     effect = {

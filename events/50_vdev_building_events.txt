@@ -10,18 +10,20 @@ vdev_building_event.1 = {
     option = {
         name = vdev_add_building_event.1.a
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_normal >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_normal_01
                     }
                 }
             }
         }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -34,22 +36,31 @@ vdev_building_event.1 = {
                 add_building = vdev_special_normal_01
             }
         }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_event.1.b
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_offensive >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_offensive_01
                     }
                 }
             }
         }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -64,22 +75,31 @@ vdev_building_event.1 = {
                 add_building = vdev_special_offensive_01
             }
         }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_event.1.c
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_defensive >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_defensive_01
                     }
                 }
             }
         }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -92,22 +112,31 @@ vdev_building_event.1 = {
                 add_building = vdev_special_defensive_01
             }
         }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_event.1.d
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_health >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_health_01
                     }
                 }
             }
         }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -120,22 +149,31 @@ vdev_building_event.1 = {
                 add_building = vdev_special_health_01
             }
         }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_event.1.e
         trigger = {
+            gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_infrastructure >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_infrastructure_01
                     }
                 }
             }
         }
+        remove_short_term_gold = vdev_building_gold_cost
         scope:barony ?= {
             county = {
                 vdev_remove_from_buff = {
@@ -148,10 +186,17 @@ vdev_building_event.1 = {
                 add_building = vdev_special_infrastructure_01
             }
         }
+        if = {
+            limit = { vdev_can_build_in_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.1
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_event.1.f
-        add_gold = vdev_building_gold_cost
+        is_cancel_option = yes
     }
 }
 
@@ -165,6 +210,7 @@ vdev_building_event.2 = {
     option = {
         name = vdev_add_building_slot_event.2.a
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
@@ -172,6 +218,7 @@ vdev_building_event.2 = {
                 }
             }
         }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
@@ -185,10 +232,18 @@ vdev_building_event.2 = {
                 add_province_modifier = extra_building_slot
             }
         }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_slot_event.2.b
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
@@ -196,6 +251,7 @@ vdev_building_event.2 = {
                 }
             }
         }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
@@ -209,10 +265,18 @@ vdev_building_event.2 = {
                 add_province_modifier = extra_building_slot
             }
         }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_slot_event.2.c
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
@@ -220,6 +284,7 @@ vdev_building_event.2 = {
                 }
             }
         }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
@@ -233,10 +298,18 @@ vdev_building_event.2 = {
                 add_province_modifier = extra_building_slot
             }
         }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_slot_event.2.d
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
@@ -244,6 +317,7 @@ vdev_building_event.2 = {
                 }
             }
         }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
@@ -257,10 +331,18 @@ vdev_building_event.2 = {
                 add_province_modifier = extra_building_slot
             }
         }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_slot_event.2.e
         trigger = {
+            gold >= vdev_building_slot_gold_cost
             scope:barony ?= {
                 county = {
                     var:vdev_county_normal >= vdev_building_slot_vdev_cost
@@ -268,6 +350,7 @@ vdev_building_event.2 = {
                 }
             }
         }
+        remove_short_term_gold = vdev_building_slot_gold_cost
         scope:barony = {
             county = {
                 vdev_remove_from_buff = {
@@ -281,9 +364,16 @@ vdev_building_event.2 = {
                 add_province_modifier = extra_building_slot
             }
         }
+        if = {
+            limit = { vdev_can_add_slot_to_selected_barony_trigger = yes }
+            trigger_event = {
+                id = vdev_building_event.2
+                days = 0
+            }
+        }
     }
     option = {
         name = vdev_add_building_slot_event.2.f
-        add_gold = vdev_building_slot_gold_cost
+        is_cancel_option = yes
     }
 }

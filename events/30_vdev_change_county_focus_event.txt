@@ -13,30 +13,40 @@ vdev_county.1 = {
     # Set to Normal
     option = {
         name = vdev_change_county_focus_event.1.a
+        trigger = { gold >= vdev_focus_change_gold_cost }
+        remove_short_term_gold = vdev_focus_change_gold_cost
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 0 }
         }
     }
     option = {
         name = vdev_change_county_focus_event.1.b
+        trigger = { gold >= vdev_focus_change_gold_cost }
+        remove_short_term_gold = vdev_focus_change_gold_cost
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 1 }
         }
     }
     option = {
         name = vdev_change_county_focus_event.1.c
+        trigger = { gold >= vdev_focus_change_gold_cost }
+        remove_short_term_gold = vdev_focus_change_gold_cost
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 2 }
         }
     }
     option = {
         name = vdev_change_county_focus_event.1.d
+        trigger = { gold >= vdev_focus_change_gold_cost }
+        remove_short_term_gold = vdev_focus_change_gold_cost
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 3 }
         }
     }
     option = {
         name = vdev_change_county_focus_event.1.e
+        trigger = { gold >= vdev_focus_change_gold_cost }
+        remove_short_term_gold = vdev_focus_change_gold_cost
         scope:barony.county = {
             vdev_set_county_focus = { FOCUS = 4 }
         }
@@ -44,7 +54,7 @@ vdev_county.1 = {
     ## just close to not get stuck
     option = {
         name = vdev_change_county_focus_event.1.f
-        add_gold = vdev_focus_change_gold_cost
+        is_cancel_option = yes
     }
 }
 
@@ -56,36 +66,46 @@ vdev_county.2 = {
 
     option = {
         name = vdev_change_all_county_focus_event.1.a
+        trigger = { gold >= vdev_focus_change_gold_cost_all }
+        remove_short_term_gold = vdev_focus_change_gold_cost_all
         every_held_county = {
             vdev_set_county_focus = { FOCUS = 0 }
         }
     }
     option = {
         name = vdev_change_all_county_focus_event.1.b
+        trigger = { gold >= vdev_focus_change_gold_cost_all }
+        remove_short_term_gold = vdev_focus_change_gold_cost_all
         every_held_county = {
             vdev_set_county_focus = { FOCUS = 1 }
         }
     }
     option = {
         name = vdev_change_all_county_focus_event.1.c
+        trigger = { gold >= vdev_focus_change_gold_cost_all }
+        remove_short_term_gold = vdev_focus_change_gold_cost_all
         every_held_county = {
             vdev_set_county_focus = { FOCUS = 2 }
         }
     }
     option = {
         name = vdev_change_all_county_focus_event.1.d
+        trigger = { gold >= vdev_focus_change_gold_cost_all }
+        remove_short_term_gold = vdev_focus_change_gold_cost_all
         every_held_county = {
             vdev_set_county_focus = { FOCUS = 3 }
         }
     }
     option = {
         name = vdev_change_all_county_focus_event.1.e
+        trigger = { gold >= vdev_focus_change_gold_cost_all }
+        remove_short_term_gold = vdev_focus_change_gold_cost_all
         every_held_county = {
             vdev_set_county_focus = { FOCUS = 4 }
         }
     }
     option = {
         name = vdev_change_all_county_focus_event.1.f
-        add_gold = vdev_focus_change_gold_cost_all
+        is_cancel_option = yes
     }
 }

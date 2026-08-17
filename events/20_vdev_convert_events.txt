@@ -9,8 +9,22 @@ vdev_convert.1 = {
 
     desc = vdev_convert.1.desc
 
+    immediate = {
+        scope:barony ?= {
+            county = {
+                save_scope_as = vdev_selected_county
+            }
+        }
+    }
+
     option = {
         name = vdev_convert_county_vdev_event.1.a
+
+        trigger = {
+            vdev_can_convert_selected_barony_trigger = yes
+        }
+
+        remove_short_term_gold = vdev_convert_vdev_gold_cost
         scope:barony?= {
             county = {
                 vdev_convert_amount_of_buff_to_another_n = {
@@ -24,9 +38,21 @@ vdev_convert.1 = {
                 }
             }
         }
+        if = {
+            limit = {
+                vdev_can_convert_selected_barony_trigger = yes
+            }
+            trigger_event = vdev_convert.1
+        }
     }
     option = {
         name = vdev_convert_county_vdev_event.1.b
+
+        trigger = {
+            vdev_can_convert_selected_barony_trigger = yes
+        }
+
+        remove_short_term_gold = vdev_convert_vdev_gold_cost
         scope:barony ?= {
             county = {
                 vdev_convert_amount_of_buff_to_another_n = {
@@ -38,9 +64,21 @@ vdev_convert.1 = {
                 vdev_refresh_county_buff = { BUFF = defensive }
             }
         }
+        if = {
+            limit = {
+                vdev_can_convert_selected_barony_trigger = yes
+            }
+            trigger_event = vdev_convert.1
+        }
     }
     option = {
         name = vdev_convert_county_vdev_event.1.c
+
+        trigger = {
+            vdev_can_convert_selected_barony_trigger = yes
+        }
+
+        remove_short_term_gold = vdev_convert_vdev_gold_cost
         scope:barony ?= {
             county = {
                 vdev_convert_amount_of_buff_to_another_n = {
@@ -52,9 +90,21 @@ vdev_convert.1 = {
                 vdev_refresh_county_buff = { BUFF = health }
             }
         }
+        if = {
+            limit = {
+                vdev_can_convert_selected_barony_trigger = yes
+            }
+            trigger_event = vdev_convert.1
+        }
     }
     option = {
         name = vdev_convert_county_vdev_event.1.d
+
+        trigger = {
+            vdev_can_convert_selected_barony_trigger = yes
+        }
+
+        remove_short_term_gold = vdev_convert_vdev_gold_cost
         scope:barony ?= {
             county = {
                 vdev_convert_amount_of_buff_to_another_n = {
@@ -66,9 +116,15 @@ vdev_convert.1 = {
                 vdev_refresh_county_buff = { BUFF = infrastructure }
             }
         }
+        if = {
+            limit = {
+                vdev_can_convert_selected_barony_trigger = yes
+            }
+            trigger_event = vdev_convert.1
+        }
     }
     option = {
         name = vdev_convert_county_vdev_event.1.e
-        add_gold = vdev_convert_vdev_gold_cost
+        is_cancel_option = yes
     }
 }
