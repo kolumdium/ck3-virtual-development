@@ -12,11 +12,11 @@ vdev_building_event.1 = {
         trigger = {
             gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_normal >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_normal_01
                     }
@@ -49,11 +49,11 @@ vdev_building_event.1 = {
         trigger = {
             gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_offensive >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_offensive_01
                     }
@@ -88,11 +88,11 @@ vdev_building_event.1 = {
         trigger = {
             gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_defensive >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_defensive_01
                     }
@@ -125,11 +125,11 @@ vdev_building_event.1 = {
         trigger = {
             gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_health >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_health_01
                     }
@@ -162,11 +162,11 @@ vdev_building_event.1 = {
         trigger = {
             gold >= vdev_building_gold_cost
             scope:barony ?= {
+                barony_has_free_building_slot_trigger = yes
                 county = {
                     var:vdev_county_infrastructure >= 25
                 }
                 title_province = {
-                    free_building_slots > 0
                     NOT = {
                         has_building_or_higher = vdev_special_infrastructure_01
                     }

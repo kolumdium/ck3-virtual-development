@@ -1,5 +1,5 @@
 ﻿l_english:
- vdev_convert.1.desc: "Convert 25 normal Virtual Development to another type of Virtual Development."
+ vdev_convert.1.desc: "Convert 25 Normal Virtual Development to another type.\n\nCurrent Virtual Development:\nNormal: #V [vdev_selected_county.MakeScope.Var('vdev_county_normal').GetValue|0]#!\nOffensive: #V [vdev_selected_county.MakeScope.Var('vdev_county_offensive').GetValue|0]#!\nDefensive: #V [vdev_selected_county.MakeScope.Var('vdev_county_defensive').GetValue|0]#!\nHealth: #V [vdev_selected_county.MakeScope.Var('vdev_county_health').GetValue|0]#!\nInfrastructure: #V [vdev_selected_county.MakeScope.Var('vdev_county_infrastructure').GetValue|0]#!"
  vdev_convert_county_vdev_event.1.a: "Convert to Offensive Development"
  vdev_convert_county_vdev_event.1.b: "Convert to Defensive Development"
  vdev_convert_county_vdev_event.1.c: "Convert to Health Development"

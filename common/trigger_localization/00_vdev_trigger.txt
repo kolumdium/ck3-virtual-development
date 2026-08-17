@@ -1,15 +1,65 @@
 ﻿vdev_add_barony_building_slot_decision_variables_fit = {
     global = vdev_add_barony_building_slot_decision_variables_fit
+    first = vdev_add_barony_building_slot_decision_variables_fit
+    third = vdev_add_barony_building_slot_decision_variables_fit
 }
 
 vdev_add_barony_building_decision_variables_fit = {
     global = vdev_add_barony_building_decision_variables_fit
+    first = vdev_add_barony_building_decision_variables_fit
+    third = vdev_add_barony_building_decision_variables_fit
 }
 
 vdev_has_barony_focus = {
     global = vdev_has_barony_focus
+    first = vdev_has_barony_focus
+    third = vdev_has_barony_focus
 }
 
 vdev_convert_vdev_decision_variables_fit = {
     global = vdev_convert_vdev_decision_variables_fit
+    first = vdev_convert_vdev_decision_variables_fit
+    third = vdev_convert_vdev_decision_variables_fit
+}
+
+has_variable = {
+    global = has_variable_trigger
+    first = has_variable_trigger
+    third = has_variable_trigger
+}
+
+vdev_has_required_normal = {
+    global = vdev_has_required_normal
+    first = vdev_has_required_normal
+    third = vdev_has_required_normal
+}
+
+vdev_has_required_offensive = {
+    global = vdev_has_required_offensive
+    first = vdev_has_required_offensive
+    third = vdev_has_required_offensive
+}
+
+vdev_has_required_defensive = {
+    global = vdev_has_required_defensive
+    first = vdev_has_required_defensive
+    third = vdev_has_required_defensive
+}
+
+vdev_has_required_health = {
+    global = vdev_has_required_health
+    first = vdev_has_required_health
+    third = vdev_has_required_health
+}
+
+vdev_has_required_infrastructure = {
+    global = vdev_has_required_infrastructure
+    first = vdev_has_required_infrastructure
+    third = vdev_has_required_infrastructure
+}
+
+vdev_has_free_building_slot = {
+    global = vdev_has_free_building_slot
+    first = vdev_has_free_building_slot
+    third = vdev_has_free_building_slot
 }

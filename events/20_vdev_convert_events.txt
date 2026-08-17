@@ -9,6 +9,14 @@ vdev_convert.1 = {
 
     desc = vdev_convert.1.desc
 
+    immediate = {
+        scope:barony ?= {
+            county = {
+                save_scope_as = vdev_selected_county
+            }
+        }
+    }
+
     option = {
         name = vdev_convert_county_vdev_event.1.a
 

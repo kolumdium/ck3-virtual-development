@@ -24,38 +24,70 @@ barony_is_valid_for_vdev_focus_trigger = {
     }
 }
 
+barony_has_free_building_slot_trigger = {
+    custom_description = {
+        text = vdev_has_free_building_slot
+        title_province = {
+            free_building_slots > 0
+        }
+    }
+}
+
 barony_is_valid_for_vdev_building_trigger = {
     holder = $CHARACTER$
-    title_province = {
-        free_building_slots > 0
-    }
+    barony_has_free_building_slot_trigger = yes
     OR = {
         AND = {
-            county = { var:vdev_county_normal >= 25 }
+            county = {
+                custom_description = {
+                    text = vdev_has_required_normal
+                    var:vdev_county_normal >= 25
+                }
+            }
             title_province = {
                 NOT = { has_building_or_higher = vdev_special_normal_01 }
             }
         }
         AND = {
-            county = { var:vdev_county_offensive >= 25 }
+            county = {
+                custom_description = {
+                    text = vdev_has_required_offensive
+                    var:vdev_county_offensive >= 25
+                }
+            }
             title_province = {
                 NOT = { has_building_or_higher = vdev_special_offensive_01 }
             }
         }
         AND = {
-            county = { var:vdev_county_defensive >= 25 }
+            county = {
+                custom_description = {
+                    text = vdev_has_required_defensive
+                    var:vdev_county_defensive >= 25
+                }
+            }
             title_province = {
                 NOT = { has_building_or_higher = vdev_special_defensive_01 }
             }
         }
         AND = {
-            county = { var:vdev_county_health >= 25 }
+            county = {
+                custom_description = {
+                    text = vdev_has_required_health
+                    var:vdev_county_health >= 25
+                }
+            }
             title_province = {
                 NOT = { has_building_or_higher = vdev_special_health_01 }
             }
         }
         AND = {
-            county = { var:vdev_county_infrastructure >= 25 }
+            county = {
+                custom_description = {
+                    text = vdev_has_required_infrastructure
+                    var:vdev_county_infrastructure >= 25
+                }
+            }
             title_province = {
                 NOT = { has_building_or_higher = vdev_special_infrastructure_01 }
             }
