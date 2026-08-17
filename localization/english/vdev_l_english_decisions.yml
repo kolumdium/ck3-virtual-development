@@ -19,4 +19,8 @@
  vdev_convert_vdev_decision_tooltip: "Convert normal Virtual Development to another type of Virtual Development."
  vdev_convert_vdev_decision_title: "Convert Virtual Development"
  vdev_convert_vdev_decision_desc: "Convert 25 normal Virtual Development to another type of Virtual Development."
+ vdev_check_barony_vdev_levels_confirm: "Show Virtual Development"
+ vdev_check_barony_vdev_levels_tooltip: "Show the current Development values of your barony."
+ vdev_check_barony_vdev_levels_title: "Show Virtual Development"
+ vdev_check_barony_vdev_levels_desc: "Show the current Development values of your barony."
  decision_group_type_vdev_decision_group: "Virtual Development Decisions"

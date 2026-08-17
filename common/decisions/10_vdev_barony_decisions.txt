@@ -91,3 +91,72 @@ vdev_change_all_barony_focus_decision = {
 
     ai_check_interval = 0
 }
+
+# Decision to see the current stats of a barony
+vdev_check_barony_vdev_levels = {
+    title = vdev_check_barony_vdev_levels_title
+
+    picture = {
+        reference = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
+    }
+
+    desc = vdev_check_barony_vdev_levels_desc
+
+    decision_group_type = vdev_decision_group
+    sort_order = 98
+
+    cooldown = { days = 0 }
+
+    is_shown = {
+        is_landless_adventurer = no
+    }
+
+    widget = {
+		controller = create_holy_order
+		barony_valid = {
+			trigger_if = {
+				limit = { exists = this }
+                barony_is_valid_for_vdev_focus_trigger = {
+                    CHARACTER = scope:ruler
+                }
+			}
+			trigger_else = {
+				custom_description = {
+					text = "has_holy_order_barony_selected"
+					always = no
+				}
+			}
+		}
+	}
+
+    is_valid = {
+        scope:barony ?= {
+            barony_is_valid_for_vdev_focus_trigger = {
+                CHARACTER = root
+            }
+        }
+        custom_description = {
+            text = "vdev_has_barony_focus"
+            any_held_title = {
+                tier = tier_barony
+                barony_is_valid_for_vdev_focus_trigger = {
+                    CHARACTER = root
+                }
+            }
+        }
+    }
+
+
+    is_valid_showing_failures_only = {
+        is_ruler = yes
+        is_available_adult = yes
+        is_at_war = no
+        is_imprisoned = no
+    }
+    
+    effect = {
+        trigger_event = vdev_county.3
+    }
+
+    ai_check_interval = 0
+}

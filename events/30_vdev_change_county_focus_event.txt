@@ -109,3 +109,25 @@ vdev_county.2 = {
         is_cancel_option = yes
     }
 }
+
+
+vdev_county.3 = {
+    type = character_event
+    hidden = no
+    theme = education
+    desc = vdev_county.3.desc
+
+    immediate = {
+        scope:barony ?= {
+            county = {
+                save_scope_as = vdev_selected_county
+            }
+        }
+    }
+
+    option = {
+        name = vdev_show_county_vdev_event.1.a
+        is_cancel_option = yes
+    }
+
+}
