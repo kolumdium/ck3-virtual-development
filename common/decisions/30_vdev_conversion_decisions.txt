@@ -14,7 +14,7 @@ vdev_convert_vdev_decision = {
     cooldown = { days = 0 }
 
     is_shown = {
-        is_landless_adventurer = no
+        always = no # Replaced by vdev_check_barony_vdev_levels.
     }
 
     widget = {

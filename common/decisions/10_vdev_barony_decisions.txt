@@ -13,7 +13,7 @@ vdev_change_barony_focus_decision = {
     cooldown = { days = 0 }
 
     is_shown = {
-        is_landless_adventurer = no
+        always = no # Replaced by vdev_check_barony_vdev_levels.
     }
 
     widget = {
@@ -92,7 +92,7 @@ vdev_change_all_barony_focus_decision = {
     ai_check_interval = 0
 }
 
-# Decision to see the current stats of a barony
+# Single-barony Virtual Development management hub.
 vdev_check_barony_vdev_levels = {
     title = vdev_check_barony_vdev_levels_title
 
@@ -103,7 +103,7 @@ vdev_check_barony_vdev_levels = {
     desc = vdev_check_barony_vdev_levels_desc
 
     decision_group_type = vdev_decision_group
-    sort_order = 98
+    sort_order = 100
 
     cooldown = { days = 0 }
 
@@ -156,7 +156,7 @@ vdev_check_barony_vdev_levels = {
     
     effect = {
         clear_variable_list = vdev_viewed_baronies
-        trigger_event = vdev_county.3
+        trigger_event = vdev_manage_realm_event.1
     }
 
     ai_check_interval = 0

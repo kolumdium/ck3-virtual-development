@@ -76,7 +76,7 @@ vdev_yearly_test.9 = {
         county = {
             set_variable = {
                 name = vdev_county_normal
-                value = 50
+                value = 500
             }
             set_variable = {
                 name = vdev_county_offensive
