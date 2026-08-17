@@ -45,6 +45,33 @@ vdev_overflow_chunk = {
     }
 }
 
+vdev_conversion_amount = {
+    value = vdev_overflow_chunk
+    multiply = -1
+}
+
+vdev_offensive_cap = {
+    value = 100
+    if = {
+        limit = { has_game_rule = vdev_offensive_cap_200 }
+        value = 200
+    }
+    else_if = {
+        limit = { has_game_rule = vdev_offensive_cap_unlimited }
+        value = 100000
+    }
+}
+
+vdev_offensive_conversion_ceiling = {
+    value = vdev_offensive_cap
+    add = vdev_overflow_chunk
+}
+
+vdev_infrastructure_conversion_ceiling = {
+    value = 100
+    add = vdev_overflow_chunk
+}
+
 vdev_ai_random = {
     value = 0
     if = {
@@ -95,7 +122,7 @@ vdev_modifier_scaling_value_defensive = {
 vdev_modifier_scaling_value_offensive = {
     value = county.var:vdev_county_offensive
     min = 1
-    max = 100
+    max = vdev_offensive_cap
     desc = MODIFIER_DEFINITION_VALUE_PER_VIRTURAL_DEVELOPMENT_OFFENSIVE_LEVEL
 }
 

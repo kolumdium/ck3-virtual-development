@@ -3,7 +3,7 @@ barony_is_valid_for_vdev_convert_trigger = {
     holder = $CHARACTER$
     barony.county = {
         has_variable = vdev_county_normal
-        var:vdev_county_normal >= 25
+        var:vdev_county_normal >= vdev_conversion_amount
     }
 }
 
@@ -11,16 +11,42 @@ barony_is_valid_for_vdev_convert_trigger = {
 vdev_can_convert_selected_barony_trigger = {
     gold >= vdev_convert_vdev_gold_cost
     scope:barony ?= {
-        barony_is_valid_for_vdev_convert_trigger = {
-            CHARACTER = root
+        custom_description = {
+            text = vdev_convert_vdev_decision_variables_fit
+            barony_is_valid_for_vdev_convert_trigger = {
+                CHARACTER = root
+            }
         }
     }
 }
 
+vdev_can_convert_to_offensive_trigger = {
+    OR = {
+        has_game_rule = vdev_offensive_cap_unlimited
+        var:vdev_county_offensive <= vdev_offensive_conversion_ceiling
+    }
+}
+
+vdev_can_convert_to_infrastructure_trigger = {
+    var:vdev_county_infrastructure <= vdev_infrastructure_conversion_ceiling
+}
+
 barony_is_valid_for_vdev_focus_trigger = {
     holder = $CHARACTER$
-    county = {
+    barony.county = {
         has_variable = vdev_county_focus
+    }
+}
+
+vdev_can_change_selected_barony_focus_trigger = {
+    gold >= vdev_focus_change_gold_cost
+    scope:barony ?= {
+        custom_description = {
+            text = vdev_has_barony_focus
+            barony_is_valid_for_vdev_focus_trigger = {
+                CHARACTER = root
+            }
+        }
     }
 }
 
@@ -38,7 +64,7 @@ barony_is_valid_for_vdev_building_trigger = {
     barony_has_free_building_slot_trigger = yes
     OR = {
         AND = {
-            county = {
+            barony.county = {
                 custom_description = {
                     text = vdev_has_required_normal
                     var:vdev_county_normal >= 25
@@ -49,7 +75,7 @@ barony_is_valid_for_vdev_building_trigger = {
             }
         }
         AND = {
-            county = {
+            barony.county = {
                 custom_description = {
                     text = vdev_has_required_offensive
                     var:vdev_county_offensive >= 25
@@ -60,7 +86,7 @@ barony_is_valid_for_vdev_building_trigger = {
             }
         }
         AND = {
-            county = {
+            barony.county = {
                 custom_description = {
                     text = vdev_has_required_defensive
                     var:vdev_county_defensive >= 25
@@ -71,7 +97,7 @@ barony_is_valid_for_vdev_building_trigger = {
             }
         }
         AND = {
-            county = {
+            barony.county = {
                 custom_description = {
                     text = vdev_has_required_health
                     var:vdev_county_health >= 25
@@ -82,7 +108,7 @@ barony_is_valid_for_vdev_building_trigger = {
             }
         }
         AND = {
-            county = {
+            barony.county = {
                 custom_description = {
                     text = vdev_has_required_infrastructure
                     var:vdev_county_infrastructure >= 25
@@ -106,7 +132,7 @@ vdev_can_build_in_selected_barony_trigger = {
 
 barony_is_valid_for_vdev_building_slot_trigger = {
     holder = $CHARACTER$
-    county = {
+    barony.county = {
         has_variable = vdev_county_normal
         var:vdev_county_normal >= vdev_building_slot_vdev_cost
         var:vdev_extra_building_slots <= 5
@@ -121,8 +147,11 @@ barony_is_valid_for_vdev_building_slot_trigger = {
 vdev_can_add_slot_to_selected_barony_trigger = {
     gold >= vdev_building_slot_gold_cost
     scope:barony ?= {
-        barony_is_valid_for_vdev_building_slot_trigger = {
-            CHARACTER = root
+        custom_description = {
+            text = vdev_add_barony_building_slot_decision_variables_fit
+            barony_is_valid_for_vdev_building_slot_trigger = {
+                CHARACTER = root
+            }
         }
     }
 }

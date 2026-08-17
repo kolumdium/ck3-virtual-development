@@ -1,0 +1,158 @@
+﻿# Manager Event
+# Shows Options then starts sub events
+# switches to next or previous barony.
+namespace = vdev_manage_realm_event
+
+vdev_manage_realm_event.1 = {
+    type = character_event
+    hidden = no
+    theme = education
+    desc = vdev_manage_realm_event.1.desc
+
+    immediate = {
+        scope:barony ?= {
+            save_scope_as = vdev_current_barony
+            root = {
+                add_to_variable_list = {
+                    name = vdev_viewed_baronies
+                    target = scope:barony
+                }
+            }
+            county = {
+                save_scope_as = vdev_selected_county
+            }
+        }
+        clear_saved_scope = vdev_next_barony
+        random_held_title = {
+            limit = {
+                tier = tier_barony
+                barony_is_valid_for_vdev_focus_trigger = {
+                    CHARACTER = root
+                }
+                save_temporary_scope_as = vdev_candidate_barony
+                root = {
+                    NOT = {
+                        is_target_in_variable_list = {
+                            name = vdev_viewed_baronies
+                            target = scope:vdev_candidate_barony
+                        }
+                    }
+                }
+            }
+            save_scope_as = vdev_next_barony
+        }
+    }
+
+    option = {
+        name = vdev_manage_realm_event.1.development
+        trigger_event = { id = vdev_manage_realm_event.2 days = 0 }
+    }
+
+    option = {
+        name = vdev_manage_realm_event.2.construction
+        trigger_event = { id = vdev_manage_realm_event.3 days = 0 }
+    }
+
+    # Next
+    option = {
+        name = vdev_manage_realm_event.1.next
+        trigger = {
+            exists = scope:vdev_next_barony
+        }
+        scope:vdev_next_barony = {
+            save_scope_as = barony
+        }
+        trigger_event = { id = vdev_manage_realm_event.1 days = 0 }
+    }
+
+    # Exit
+    option = {
+        name = vdev_manage_realm_event.1.exit
+        clear_variable_list = vdev_viewed_baronies
+        is_cancel_option = yes
+    }
+
+}
+
+vdev_manage_realm_event.2 = {
+    type = character_event
+    hidden = no
+    theme = education
+    desc = vdev_manage_realm_event.2.desc
+
+    option = {
+        name = vdev_manage_realm_event.2.focus
+        trigger = {
+            custom_tooltip = {
+                text = vdev_manage_focus_requirements
+                vdev_can_change_selected_barony_focus_trigger = yes
+            }
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger_event = { id = vdev_county.1 days = 0 }
+    }
+
+    option = {
+        name = vdev_manage_realm_event.2.convert
+        trigger = {
+            custom_tooltip = {
+                text = vdev_manage_conversion_requirements
+                vdev_can_convert_selected_barony_trigger = yes
+            }
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger_event = { id = vdev_convert.1 days = 0 }
+    }
+
+    option = {
+        name = vdev_manage_realm_event.back
+        trigger_event = { id = vdev_manage_realm_event.1 days = 0 }
+        is_cancel_option = yes
+    }
+}
+
+
+vdev_manage_realm_event.3 = {
+    type = character_event
+    hidden = no
+    theme = education
+    desc = vdev_manage_realm_event.3.desc
+
+    option = {
+        name = vdev_manage_realm_event.3.building
+        trigger = {
+            custom_tooltip = {
+                text = vdev_manage_building_requirements
+                vdev_can_build_in_selected_barony_trigger = yes
+            }
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger_event = { id = vdev_building_event.1 days = 0 }
+    }
+
+    option = {
+        name = vdev_manage_realm_event.3.slot
+        trigger = {
+            custom_tooltip = {
+                text = vdev_manage_building_slot_requirements
+                vdev_can_add_slot_to_selected_barony_trigger = yes
+            }
+        }
+        show_as_unavailable = {
+            always = yes
+        }
+        trigger_event = { id = vdev_building_event.2 days = 0 }
+    }
+
+    option = {
+        name = vdev_manage_realm_event.back
+        trigger_event = { id = vdev_manage_realm_event.1 days = 0 }
+        is_cancel_option = yes
+    }
+}

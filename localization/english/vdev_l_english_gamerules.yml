@@ -32,6 +32,14 @@
  setting_vdev_ai_buff_just_normal: "Only Normal Buff for AI"
  setting_vdev_ai_buff_just_normal_desc: "The AI will only convert to 'normal' Virtual Development. This mirrors normal Development the best."
 
+ rule_vdev_offensive_cap_preset: "Offensive Virtual Development Limit"
+ setting_vdev_offensive_cap_100: "Standard: 100"
+ setting_vdev_offensive_cap_100_desc: "Offensive Virtual Development is capped at #V 100#!."
+ setting_vdev_offensive_cap_200: "High: 200"
+ setting_vdev_offensive_cap_200_desc: "Offensive Virtual Development is capped at #V 200#!."
+ setting_vdev_offensive_cap_unlimited: "Uncapped"
+ setting_vdev_offensive_cap_unlimited_desc: "Offensive Virtual Development has no conversion limit."
+
  rule_vdev_new_slot_scaling_cost_preset: "Set the how much more expensive later slots will be. They cost normal vdev."
  setting_vdev_slot_scaling_0: "vdev slot scaling 0."
  setting_vdev_slot_scaling_0_desc: "new vdev building slots cost no vdev."

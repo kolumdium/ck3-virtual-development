@@ -22,6 +22,11 @@ vdev_convert.1 = {
 
         trigger = {
             vdev_can_convert_selected_barony_trigger = yes
+            scope:barony ?= {
+                barony.county = {
+                    vdev_can_convert_to_offensive_trigger = yes
+                }
+            }
         }
 
         remove_short_term_gold = vdev_convert_vdev_gold_cost
@@ -38,12 +43,7 @@ vdev_convert.1 = {
                 }
             }
         }
-        if = {
-            limit = {
-                vdev_can_convert_selected_barony_trigger = yes
-            }
-            trigger_event = vdev_convert.1
-        }
+        trigger_event = { id = vdev_convert.1 days = 0 }
     }
     option = {
         name = vdev_convert_county_vdev_event.1.b
@@ -64,12 +64,7 @@ vdev_convert.1 = {
                 vdev_refresh_county_buff = { BUFF = defensive }
             }
         }
-        if = {
-            limit = {
-                vdev_can_convert_selected_barony_trigger = yes
-            }
-            trigger_event = vdev_convert.1
-        }
+        trigger_event = { id = vdev_convert.1 days = 0 }
     }
     option = {
         name = vdev_convert_county_vdev_event.1.c
@@ -90,18 +85,18 @@ vdev_convert.1 = {
                 vdev_refresh_county_buff = { BUFF = health }
             }
         }
-        if = {
-            limit = {
-                vdev_can_convert_selected_barony_trigger = yes
-            }
-            trigger_event = vdev_convert.1
-        }
+        trigger_event = { id = vdev_convert.1 days = 0 }
     }
     option = {
         name = vdev_convert_county_vdev_event.1.d
 
         trigger = {
             vdev_can_convert_selected_barony_trigger = yes
+            scope:barony ?= {
+                barony.county = {
+                    vdev_can_convert_to_infrastructure_trigger = yes
+                }
+            }
         }
 
         remove_short_term_gold = vdev_convert_vdev_gold_cost
@@ -116,15 +111,11 @@ vdev_convert.1 = {
                 vdev_refresh_county_buff = { BUFF = infrastructure }
             }
         }
-        if = {
-            limit = {
-                vdev_can_convert_selected_barony_trigger = yes
-            }
-            trigger_event = vdev_convert.1
-        }
+        trigger_event = { id = vdev_convert.1 days = 0 }
     }
     option = {
         name = vdev_convert_county_vdev_event.1.e
+        trigger_event = { id = vdev_manage_realm_event.1 days = 0 }
         is_cancel_option = yes
     }
 }
